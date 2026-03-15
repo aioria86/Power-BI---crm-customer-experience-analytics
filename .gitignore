@@ -1,0 +1,21 @@
+# Power BI cache
+*.pbix.autosave
+*.pbix.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# notebooks checkpoints
+.ipynb_checkpoints/
+
+# private notes
+private_notes/
+
+# temporary files
+*.log
+*.tmp

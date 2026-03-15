@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "crm_customer_analytics"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "45a30462-9a73-429e-ac8b-0bf173002644"
+  }
+}
