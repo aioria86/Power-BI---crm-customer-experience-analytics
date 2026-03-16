@@ -10,5 +10,12 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["marketing_campaign","Calendar"]
+
+ref table marketing_campaign
+ref table DateTableTemplate_6f83dcf4-b6e4-47eb-94cf-d7b822ad759b
+ref table LocalDateTable_3ec1e116-f95a-4172-a726-a2a91036956d
+ref table Calendar
+
 ref cultureInfo es-ES
 
