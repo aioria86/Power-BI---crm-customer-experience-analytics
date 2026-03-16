@@ -1,0 +1,24 @@
+table Measures_Table
+	lineageTag: 052d9a09-08b3-4bce-961b-c937b1ec53cf
+
+	column Columna1
+		dataType: string
+		lineageTag: 5d32c8ea-eabb-4132-9ac3-8ceaaa0a409d
+		summarizeBy: none
+		sourceColumn: Columna1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Measures_Table = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

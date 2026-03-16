@@ -1,0 +1,26 @@
+table DimEducation
+	lineageTag: d81c08e8-92b9-4453-b4b1-4b756c96899f
+
+	column Education_level
+		dataType: string
+		lineageTag: 2c828b16-d1c9-4136-adae-361f9811ed40
+		summarizeBy: none
+		sourceColumn: Education_level
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimEducation = m
+		mode: import
+		source =
+				let
+				    Origen = DimCustomer,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"Education_level"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas"),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Duplicados quitados",{{"Education_level", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

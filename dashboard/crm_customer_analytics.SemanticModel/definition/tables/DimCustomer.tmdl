@@ -1,0 +1,69 @@
+table DimCustomer
+	lineageTag: 78a20b34-ba36-4c3e-bf67-8dd5dc5a8529
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 9caa9982-0a4a-4f2d-b876-d34ef4df57a4
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year_Birth
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cc483e8-ad76-400d-852c-f8b452b3f16d
+		summarizeBy: sum
+		sourceColumn: Year_Birth
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age
+		dataType: int64
+		formatString: 0
+		lineageTag: 94883bd9-6345-448e-9355-59dc444cd72a
+		summarizeBy: sum
+		sourceColumn: Age
+
+		annotation SummarizationSetBy = Automatic
+
+	column Age_segment
+		dataType: string
+		lineageTag: 7fe48812-b835-4ce1-bee3-f2a796977362
+		summarizeBy: none
+		sourceColumn: Age_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education_level
+		dataType: string
+		lineageTag: a48637d7-729c-499d-a210-e6ff0e96617e
+		summarizeBy: none
+		sourceColumn: Education_level
+
+		annotation SummarizationSetBy = Automatic
+
+	column Marital_Status
+		dataType: string
+		lineageTag: c18749ad-eefb-44e9-b171-2fda13cad515
+		summarizeBy: none
+		sourceColumn: Marital_Status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimCustomer = m
+		mode: import
+		source =
+				let
+				    Origen = marketing_campaign,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"ID", "Year_Birth", "Age", "Age_segment", "Education_level", "Marital_Status"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas", {"ID"}),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Duplicados quitados",{{"Age_segment", type text}, {"Education_level", type text}, {"Marital_Status", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,5 +1,21 @@
-relationship 1a9f4baf-5b1e-4eb8-aff6-2af4ee7db45c
-	joinOnDateBehavior: datePartOnly
-	fromColumn: marketing_campaign.Dt_Customer
-	toColumn: LocalDateTable_3ec1e116-f95a-4172-a726-a2a91036956d.Date
+relationship AutoDetected_96ed07f0-355d-4822-a6e8-7042d2c09d76
+	fromColumn: DimCustomer.Age_segment
+	toColumn: DimAgeGroup.Age_segment
+
+relationship AutoDetected_5b82e6a8-89ee-43f3-bd05-d43a666bdb96
+	fromColumn: DimCustomer.Education_level
+	toColumn: DimEducation.Education_level
+
+relationship AutoDetected_100edad4-df3b-4dc5-9e2d-26e24ed8df06
+	fromColumn: DimCustomer.Marital_Status
+	toColumn: DimMarital.Marital_Status
+
+relationship c330e26c-fdb3-df3c-48be-05c13bd0bcc1
+	crossFilteringBehavior: bothDirections
+	fromColumn: FactCustomerMetrics.ID
+	toColumn: DimCustomer.ID
+
+relationship b6c44692-6180-a4fd-4e67-cadca8f82ed1
+	fromColumn: FactCustomerMetrics.Dt_Customer
+	toColumn: DimDate.Date
 

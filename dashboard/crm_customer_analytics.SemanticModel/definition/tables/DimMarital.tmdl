@@ -1,0 +1,29 @@
+table DimMarital
+	lineageTag: e27d282a-809b-45a2-b75c-2a4273eb755e
+
+	column Marital_Status
+		dataType: string
+		lineageTag: e7fc17f6-669c-4e35-b78b-ed7efb55bddd
+		summarizeBy: none
+		sourceColumn: Marital_Status
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimMarital = m
+		mode: import
+		source =
+				let
+				    Origen = DimCustomer,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"Marital_Status"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas")
+				in
+				    #"Duplicados quitados"
+
+	changedProperty = IsHidden
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
