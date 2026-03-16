@@ -1,22 +1,230 @@
 table Measures_Table
 	lineageTag: 052d9a09-08b3-4bce-961b-c937b1ec53cf
 
-	column Columna1
-		dataType: string
-		lineageTag: 5d32c8ea-eabb-4132-9ac3-8ceaaa0a409d
-		summarizeBy: none
-		sourceColumn: Columna1
+	measure 'Total Customers' = DISTINCTCOUNT(FactCustomerMetrics[ID])
+		formatString: #,0
+		displayFolder: KPIs\Customer KPIs
+		lineageTag: 4a60286f-e048-437f-8117-14906c518063
 
-		annotation SummarizationSetBy = Automatic
+	measure 'Avg Customer Income' = AVERAGE(FactCustomerMetrics[Income])
+		formatString: #,0.00
+		displayFolder: KPIs\Customer KPIs
+		lineageTag: 9b5914a0-37eb-44ed-b4b0-ff3e90104971
+
+	measure 'Avg Customer Age' = AVERAGE(DimCustomer[Age])
+		formatString: 0.00
+		displayFolder: KPIs\Customer KPIs
+		lineageTag: 9a2846c0-05da-48a8-9d4c-639326ea165a
+
+	measure 'Avg Recency' = AVERAGE(FactCustomerMetrics[Recency])
+		formatString: 0.00
+		displayFolder: KPIs\Customer KPIs
+		lineageTag: 983a2658-e481-4184-8fe2-d6fc79488e4f
+
+	measure 'Customers With Children' =
+			
+			CALCULATE(
+			    COUNTROWS(FactCustomerMetrics),
+			    FactCustomerMetrics[Total_Children]> 0
+			)
+		formatString: #,0
+		displayFolder: KPIs\Customer KPIs
+		lineageTag: 6f366abc-9e93-4f4d-beee-6ba85150e7f9
+
+	measure 'Total Revenue' = SUM(FactCustomerMetrics[Total_Spending])
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: c91166f0-b60a-4003-a879-ae72e73c6913
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Avg Purchase Value' =
+			
+			DIVIDE(
+			    [Total Revenue],
+			    SUM(FactCustomerMetrics[Total_Purchases])
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: 8f1ebe62-01c0-4490-a44a-16735ed0ef8e
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue Engaged Customers' =
+			
+			CALCULATE(
+			    [Total Revenue],
+			    FactCustomerMetrics[Engagement_Score] > 0
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: 21151e81-152a-435b-9e17-9ea478d84f58
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue Wines' = SUM(FactCustomerMetrics[MntWines])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: b444a697-6821-4d9c-b76f-86458413a0d4
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Revenue Fruits' = SUM(FactCustomerMetrics[MntFruits])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: cea8d395-ffde-4df9-a4dd-178ffdc165d3
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Revenue Meat' = SUM(FactCustomerMetrics[MntMeatProducts])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: c275650b-e184-4fb3-87fe-b3da7b95460e
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Revenue Fish' = SUM(FactCustomerMetrics[MntFishProducts])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: 24897b1d-42be-4bd5-b40f-51e44669e47c
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Revenue Sweets' = SUM(FactCustomerMetrics[MntSweetProducts])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: d18c1420-9bd1-4b36-953e-02a0f2550f64
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Revenue Gold' = SUM(FactCustomerMetrics[MntGoldProds])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
+		lineageTag: b555a434-1162-4e92-b816-22c996353dc8
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Total Purchases' = SUM(FactCustomerMetrics[Total_Purchases])
+		formatString: 0
+		displayFolder: KPIs\Purchase Behavior KPIs
+		lineageTag: 5333393d-d1cc-4fb4-8e5a-bc1ed5c61276
+
+	measure 'Avg Purchases Customer' =
+			
+			DIVIDE(
+			    [Total Purchases],
+			    [Total Customers]
+			    )
+		displayFolder: KPIs\Purchase Behavior KPIs
+		lineageTag: 71e30ce2-f1b6-4a31-89f0-500fbae3fc7a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Web Purchases' = SUM(FactCustomerMetrics[NumWebPurchases])
+		formatString: #,0
+		displayFolder: KPIs\Purchase Behavior KPIs
+		lineageTag: 347fff1e-1b48-4870-9e03-9d7a0cc414e6
+
+	measure 'Store Purchases' = SUM(FactCustomerMetrics[NumStorePurchases])
+		formatString: #,0
+		displayFolder: KPIs\Purchase Behavior KPIs
+		lineageTag: 54cdd7ee-ab97-4d85-a87b-3327c7104aa7
+
+	measure 'Catalog Purchases' = SUM(FactCustomerMetrics[NumCatalogPurchases])
+		formatString: #,0
+		displayFolder: KPIs\Purchase Behavior KPIs
+		lineageTag: 5950b3fc-842b-42ad-a75e-f35a191d2ae4
+
+	measure 'Campaign Responses' = SUM(FactCustomerMetrics[Response])
+		formatString: #,0
+		displayFolder: KPIs\Marketing Campaign KPIs
+		lineageTag: 470dc576-d7b9-4732-9f17-f3f8ddaef74c
+
+	measure 'Campaign Conversion Rate' =
+			
+			DIVIDE(
+			    [Campaign Responses],
+			    [Total Customers]
+			    )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: KPIs\Marketing Campaign KPIs
+		lineageTag: 9bd9b47e-7137-482d-90a9-f3f4f46c3018
+
+	measure 'Total Campaign Accepted' = SUM(FactCustomerMetrics[TotalCampaignAccepted])
+		formatString: #,0
+		displayFolder: KPIs\Marketing Campaign KPIs
+		lineageTag: a04bc006-2707-414a-b4e9-955d43a59e21
+
+	measure 'Avg Campaign Accepted' = AVERAGE(FactCustomerMetrics[TotalCampaignAccepted])
+		displayFolder: KPIs\Marketing Campaign KPIs
+		lineageTag: 9239dd31-c8fd-4a61-9b2b-29e8c56b7c6c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Campaign Responders' =
+			
+			CALCULATE(
+			    [Total Revenue],
+			    FactCustomerMetrics[Response] = 1
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Marketing Campaign KPIs
+		lineageTag: 7e44a5ac-db5c-4b3b-a528-d6b0986a57f7
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Avg Engagement' = AVERAGE(FactCustomerMetrics[Engagement_Score])
+		displayFolder: KPIs\Engagement KPIs
+		lineageTag: 4fa8c169-7199-4656-bdc9-06d48140af78
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'High Engagement Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    FactCustomerMetrics[Engagement_Score] >= 11
+			)
+		formatString: #,0
+		displayFolder: KPIs\Engagement KPIs
+		lineageTag: 29f18464-726a-4103-8169-6d2d6e39faf4
+
+	measure 'Active Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    FactCustomerMetrics[Recency] <= 30
+			)
+		formatString: #,0
+		displayFolder: KPIs\Retention KPIs
+		lineageTag: 4006b34a-8cc1-41de-86ac-2eb8c5e188c9
+
+	measure 'At Risk Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    FactCustomerMetrics[Recency] > 90
+			)
+		formatString: #,0
+		displayFolder: KPIs\Retention KPIs
+		lineageTag: 245500a3-558a-4015-8aae-05f297a99f45
+
+	measure 'Estimated CLV' = [Avg Purchase Value] * [Avg Purchases Customer]
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		displayFolder: KPIs\Retention KPIs
+		lineageTag: f07ad5ed-7956-445b-a845-443a3aa921ab
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	partition Measures_Table = m
 		mode: import
 		source =
 				let
 				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}})
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
 				in
-				    #"Tipo cambiado"
+				    #"Columnas quitadas"
 
 	annotation PBI_NavigationStepName = Navegación
 
