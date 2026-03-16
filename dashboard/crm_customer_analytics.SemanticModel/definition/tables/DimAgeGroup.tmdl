@@ -1,0 +1,25 @@
+table DimAgeGroup
+	lineageTag: 8ad874a2-d9b7-4d66-a810-13e9519b16c7
+
+	column Age_segment
+		dataType: string
+		lineageTag: 1c486312-3a93-4033-88ec-7984bf3af11e
+		summarizeBy: none
+		sourceColumn: Age_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimAgeGroup = m
+		mode: import
+		source =
+				let
+				    Origen = DimCustomer,
+				    #"Otras columnas quitadas" = Table.SelectColumns(Origen,{"Age_segment"}),
+				    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas")
+				in
+				    #"Duplicados quitados"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

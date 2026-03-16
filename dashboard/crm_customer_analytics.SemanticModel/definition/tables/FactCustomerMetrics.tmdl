@@ -1,0 +1,295 @@
+table FactCustomerMetrics
+	lineageTag: f2b25773-4769-4baa-8a83-d105ffedb23c
+
+	column ID
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: c11f4100-3e28-45a2-8928-a583edc753ca
+		summarizeBy: none
+		sourceColumn: ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Income
+		dataType: int64
+		formatString: 0
+		lineageTag: ca50f982-5641-48cf-83f1-636f49491036
+		summarizeBy: sum
+		sourceColumn: Income
+
+		annotation SummarizationSetBy = Automatic
+
+	column Kidhome
+		dataType: int64
+		formatString: 0
+		lineageTag: a8bbb773-9bd0-4da6-b307-aa42d9d718ef
+		summarizeBy: sum
+		sourceColumn: Kidhome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Teenhome
+		dataType: int64
+		formatString: 0
+		lineageTag: 917d2190-683b-4099-bf4d-908d4a343c18
+		summarizeBy: sum
+		sourceColumn: Teenhome
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dt_Customer
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 22411d6d-a186-4211-aec5-6b54aecedde3
+		summarizeBy: none
+		sourceColumn: Dt_Customer
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Recency
+		dataType: int64
+		formatString: 0
+		lineageTag: 2da09d8e-306f-4cc0-aa00-70068e0712bc
+		summarizeBy: sum
+		sourceColumn: Recency
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntWines
+		dataType: int64
+		formatString: 0
+		lineageTag: 0cec7b46-793f-4b9c-8623-0ddc06a8b693
+		summarizeBy: sum
+		sourceColumn: MntWines
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntFruits
+		dataType: int64
+		formatString: 0
+		lineageTag: e95017ef-1e02-4d12-a614-5c3418c66682
+		summarizeBy: sum
+		sourceColumn: MntFruits
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntMeatProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: f8eeb183-f3f7-48b4-8b5e-0e64d5f167a4
+		summarizeBy: sum
+		sourceColumn: MntMeatProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntFishProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: 1fcb8907-4275-43b5-a350-2a8940eacfa8
+		summarizeBy: sum
+		sourceColumn: MntFishProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntSweetProducts
+		dataType: int64
+		formatString: 0
+		lineageTag: 8078344e-878c-408b-8278-9219a07c30c3
+		summarizeBy: sum
+		sourceColumn: MntSweetProducts
+
+		annotation SummarizationSetBy = Automatic
+
+	column MntGoldProds
+		dataType: int64
+		formatString: 0
+		lineageTag: bf05f453-a619-458a-a7c4-864d136e0ad9
+		summarizeBy: sum
+		sourceColumn: MntGoldProds
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumDealsPurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 1bc3735d-e25e-4161-8e0f-65f54cbc7546
+		summarizeBy: sum
+		sourceColumn: NumDealsPurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumWebPurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 34114c49-10c0-4a93-8d11-bf161de14bf8
+		summarizeBy: sum
+		sourceColumn: NumWebPurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumCatalogPurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: b40f6e96-276b-4c77-a0b3-2587b29ebcf0
+		summarizeBy: sum
+		sourceColumn: NumCatalogPurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumStorePurchases
+		dataType: int64
+		formatString: 0
+		lineageTag: 969787f1-fbf8-4475-bab2-3a21666e5e10
+		summarizeBy: sum
+		sourceColumn: NumStorePurchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumWebVisitsMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: 91f60453-b910-48bb-817c-064f3a200e96
+		summarizeBy: sum
+		sourceColumn: NumWebVisitsMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp3
+		dataType: int64
+		formatString: 0
+		lineageTag: 39752153-9398-4bb0-a6c2-e1126b234942
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp3
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp4
+		dataType: int64
+		formatString: 0
+		lineageTag: 8bf21fd2-5866-4033-9316-79a18260da0f
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp4
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp5
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a27a096-988a-48ee-b894-0649b5ed0f2f
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp5
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp1
+		dataType: int64
+		formatString: 0
+		lineageTag: b297b675-96c8-4907-859d-a58acfe504e5
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp1
+
+		annotation SummarizationSetBy = Automatic
+
+	column AcceptedCmp2
+		dataType: int64
+		formatString: 0
+		lineageTag: dfc514b8-77fd-4d64-8c35-b7f5bc7539a2
+		summarizeBy: sum
+		sourceColumn: AcceptedCmp2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complain
+		dataType: int64
+		formatString: 0
+		lineageTag: 4087810b-3bbf-45ea-9872-1e9bf0306c4a
+		summarizeBy: sum
+		sourceColumn: Complain
+
+		annotation SummarizationSetBy = Automatic
+
+	column Response
+		dataType: int64
+		formatString: 0
+		lineageTag: 119ac640-6f45-47ff-8b38-4874ce3cf8bb
+		summarizeBy: sum
+		sourceColumn: Response
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Spending
+		dataType: decimal
+		formatString: "S/"\ #,0.###############;-"S/"\ #,0.###############;"S/"\ #,0.###############
+		lineageTag: 05e2333d-c019-4512-a4c4-5e04bb5a6217
+		summarizeBy: sum
+		sourceColumn: Total_Spending
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	column Total_Purchases
+		dataType: int64
+		formatString: 0
+		lineageTag: b42bed44-795a-41a2-a85a-c20018fb23d0
+		summarizeBy: sum
+		sourceColumn: Total_Purchases
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalCampaignAccepted
+		dataType: int64
+		formatString: 0
+		lineageTag: 27ca5245-176b-4596-a4e3-a1e002b080e1
+		summarizeBy: sum
+		sourceColumn: TotalCampaignAccepted
+
+		annotation SummarizationSetBy = Automatic
+
+	column Engagement_Score
+		dataType: int64
+		formatString: 0
+		lineageTag: 307c5841-bb03-4328-800e-7fd378632b2a
+		summarizeBy: sum
+		sourceColumn: Engagement_Score
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_Children
+		dataType: int64
+		formatString: 0
+		lineageTag: c410f051-f507-41b5-ab56-fbb731f49677
+		summarizeBy: sum
+		sourceColumn: Total_Children
+
+		annotation SummarizationSetBy = Automatic
+
+	column Engagement_Score_segment
+		dataType: string
+		lineageTag: a1194dfa-ae1c-48bb-ae66-17da8ac3cbf5
+		summarizeBy: none
+		sourceColumn: Engagement_Score_segment
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FactCustomerMetrics = m
+		mode: import
+		source =
+				let
+				    Origen = marketing_campaign,
+				    #"Columnas quitadas" = Table.RemoveColumns(Origen,{"Year_Birth", "Age", "Age_segment", "Marital_Status", "Education_level"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

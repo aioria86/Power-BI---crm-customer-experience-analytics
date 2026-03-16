@@ -1,0 +1,36 @@
+expression marketing_campaign =
+		let
+		    Origen = Csv.Document(File.Contents("C:\Users\Juan Manuel\Documents\PERSONALES\PROYECTOS\Power-BI---crm-customer-experience-analytics\data\raw\marketing_campaign.csv"),[Delimiter="	", Columns=29, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+		    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID", Int64.Type}, {"Year_Birth", Int64.Type}, {"Education", type text}, {"Marital_Status", type text}, {"Income", Int64.Type}, {"Kidhome", Int64.Type}, {"Teenhome", Int64.Type}, {"Dt_Customer", type date}, {"Recency", Int64.Type}, {"MntWines", Int64.Type}, {"MntFruits", Int64.Type}, {"MntMeatProducts", Int64.Type}, {"MntFishProducts", Int64.Type}, {"MntSweetProducts", Int64.Type}, {"MntGoldProds", Int64.Type}, {"NumDealsPurchases", Int64.Type}, {"NumWebPurchases", Int64.Type}, {"NumCatalogPurchases", Int64.Type}, {"NumStorePurchases", Int64.Type}, {"NumWebVisitsMonth", Int64.Type}, {"AcceptedCmp3", Int64.Type}, {"AcceptedCmp4", Int64.Type}, {"AcceptedCmp5", Int64.Type}, {"AcceptedCmp1", Int64.Type}, {"AcceptedCmp2", Int64.Type}, {"Complain", Int64.Type}, {"Z_CostContact", Int64.Type}, {"Z_Revenue", Int64.Type}, {"Response", Int64.Type}}),
+		    #"Personalizada agregada" = Table.AddColumn(#"Tipo cambiado", "Age", each Date.Year(DateTime.LocalNow()) - [Year_Birth]),
+		    #"Tipo cambiado1" = Table.TransformColumnTypes(#"Personalizada agregada",{{"Age", Int64.Type}}),
+		    #"Columna condicional agregada" = Table.AddColumn(#"Tipo cambiado1", "Age_segment", each if [Age] >= 60 then "Senior" else if [Age] >= 45 then "Mature" else if [Age] >= 30 then "Adult" else if [Age] >= 18 then "Young" else "Under Age"),
+		    #"Filas filtradas" = Table.SelectRows(#"Columna condicional agregada", each true),
+		    #"Columnas con nombre cambiado" = Table.RenameColumns(#"Filas filtradas",{{"Marital_Status", "Marital_Status_OG"}}),
+		    #"Columna condicional agregada1" = Table.AddColumn(#"Columnas con nombre cambiado", "Marital_Status", each if [Marital_Status_OG] = "Single" then "Single" else if [Marital_Status_OG] = "Alone" then "Single" else if [Marital_Status_OG] = "Together" then "Couple" else if [Marital_Status_OG] = "Married" then "Couple" else if [Marital_Status_OG] = "Divorced" then "Divorced" else if [Marital_Status_OG] = "Widow" then "Widow" else if [Marital_Status_OG] = "Absurd" then "Other" else if [Marital_Status_OG] = "YOLO" then "Other" else "Other"),
+		    #"Columnas quitadas" = Table.RemoveColumns(#"Columna condicional agregada1",{"Marital_Status_OG"}),
+		    #"Columna condicional agregada2" = Table.AddColumn(#"Columnas quitadas", "Education_level", each if [Education] = "PhD" then "Postgraduate" else if [Education] = "Master" then "Postgraduate" else if [Education] = "Graduation" then "University" else if [Education] = "2n Cycle" then "University" else if [Education] = "Basic" then "Basic" else "Other"),
+		    #"Columnas quitadas1" = Table.RemoveColumns(#"Columna condicional agregada2",{"Education"}),
+		    #"Personalizada agregada1" = Table.AddColumn(#"Columnas quitadas1", "Total_Spending", each [MntWines] + [MntFruits] + [MntMeatProducts] + [MntFishProducts] + [MntSweetProducts] + [MntGoldProds]),
+		    #"Tipo cambiado2" = Table.TransformColumnTypes(#"Personalizada agregada1",{{"Total_Spending", Currency.Type}}),
+		    #"Personalizada agregada2" = Table.AddColumn(#"Tipo cambiado2", "Total_Purchases", each [NumDealsPurchases] + [NumWebPurchases] + [NumCatalogPurchases] + [NumStorePurchases]),
+		    #"Tipo cambiado3" = Table.TransformColumnTypes(#"Personalizada agregada2",{{"Total_Purchases", Int64.Type}}),
+		    #"Personalizada agregada3" = Table.AddColumn(#"Tipo cambiado3", "TotalCampaignAccepted", each [AcceptedCmp1] + [AcceptedCmp2] + [AcceptedCmp3] + [AcceptedCmp4] + [AcceptedCmp5]),
+		    #"Tipo cambiado4" = Table.TransformColumnTypes(#"Personalizada agregada3",{{"TotalCampaignAccepted", Int64.Type}}),
+		    #"Personalizada agregada4" = Table.AddColumn(#"Tipo cambiado4", "Engagement Score", each [Total_Purchases] + [TotalCampaignAccepted]),
+		    #"Tipo cambiado5" = Table.TransformColumnTypes(#"Personalizada agregada4",{{"Engagement Score", Int64.Type}}),
+		    #"Columnas quitadas2" = Table.RemoveColumns(#"Tipo cambiado5",{"Z_CostContact", "Z_Revenue"}),
+		    #"Personalizada agregada5" = Table.AddColumn(#"Columnas quitadas2", "Total_Children", each [Kidhome] + [Teenhome]),
+		    #"Tipo cambiado6" = Table.TransformColumnTypes(#"Personalizada agregada5",{{"Total_Children", Int64.Type}}),
+		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Tipo cambiado6",{{"Engagement Score", "Engagement_Score"}}),
+		    #"Columna condicional agregada3" = Table.AddColumn(#"Columnas con nombre cambiado1", "Engagement_Score_segment", each if [Engagement_Score] >= 21 then "Champions" else if [Engagement_Score] >= 11 then "High Engagement" else if [Engagement_Score] >= 4 then "Medium Engagement" else if [Engagement_Score] >= 1 then "Low Engagement" else "No Engagement"),
+		    #"Tipo cambiado7" = Table.TransformColumnTypes(#"Columna condicional agregada3",{{"Engagement_Score_segment", type text}})
+		in
+		    #"Tipo cambiado7"
+	lineageTag: ae9cb267-34fb-4fb1-9180-049ca69745fd
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
