@@ -216,6 +216,46 @@ table Measures_Table
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
+	measure 'Total Customers Prev Month' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    ))
+		formatString: #,0
+		lineageTag: 39fefa91-79df-43c0-bdb6-1956f2509fbb
+
+	measure 'Total Customers Variance' = [Total Customers] - [Total Customers Prev Month]
+		formatString: 0
+		lineageTag: ee979542-fe23-4525-940e-3c0cd1833921
+
+	measure 'Customer Growth' =
+			
+			DIVIDE(
+			    [Total Customers] - [Total Customers Prev Month],
+			    [Total Customers Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 2a4157e5-a1c7-4aa4-bbfc-9737ac2bd697
+
+	measure 'New Customers' =
+			
+			CALCULATE(
+			    [Total Customers],
+			    DATESINPERIOD(
+			        DimDate[Date],
+			        MAX(DimDate[Date]),
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: #,0
+		lineageTag: d50d9ac6-4e90-4116-8dae-06f47291e9a3
+
 	partition Measures_Table = m
 		mode: import
 		source =
