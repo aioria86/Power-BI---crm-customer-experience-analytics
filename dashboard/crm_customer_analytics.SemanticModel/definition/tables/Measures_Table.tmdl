@@ -358,6 +358,20 @@ table Measures_Table
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
+	measure 'Revenue Selected Category' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Product Category Table'[Category]),
+			    "Wines", [Revenue Wines],
+			    "Meat", [Revenue Meat],
+			    "Fish", [Revenue Fish],
+			    "Fruits", [Revenue Fruits],
+			    "Sweets", [Revenue Sweets],
+			    "Gold", [Revenue Gold]
+			)
+		formatString: 0
+		lineageTag: 97d8149f-6816-4f73-a098-a54acc42a960
+
 	partition Measures_Table = m
 		mode: import
 		source =

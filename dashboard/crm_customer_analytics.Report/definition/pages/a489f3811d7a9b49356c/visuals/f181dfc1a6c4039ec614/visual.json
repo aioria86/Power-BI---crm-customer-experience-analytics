@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
   "name": "f181dfc1a6c4039ec614",
   "position": {
-    "x": 70.447761194029852,
-    "y": 91.343283582089555,
-    "z": 3000,
-    "height": 161.19402985074626,
-    "width": 309.85074626865674
+    "x": 70.345208505937563,
+    "y": 91.2013256006628,
+    "z": 7500,
+    "height": 199.37033968516982,
+    "width": 310.72079536039769
   },
   "visualGroup": {
     "displayName": "KPI Customers",
