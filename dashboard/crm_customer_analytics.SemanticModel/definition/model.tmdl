@@ -19,6 +19,7 @@ ref table DimEducation
 ref table DimMarital
 ref table DimAgeGroup
 ref table Measures_Table
+ref table 'Product Category Table'
 
 ref cultureInfo es-ES
 

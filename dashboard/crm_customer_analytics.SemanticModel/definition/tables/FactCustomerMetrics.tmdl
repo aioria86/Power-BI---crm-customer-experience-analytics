@@ -280,6 +280,44 @@ table FactCustomerMetrics
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Income Group' =
+			
+			SWITCH(
+			    TRUE(),
+			    FactCustomerMetrics[Income] < 15000, "0-15k",
+			    FactCustomerMetrics[Income] < 30000, "15-30k",
+			    FactCustomerMetrics[Income] < 45000, "30-45k",
+			    FactCustomerMetrics[Income] < 60000, "45-60k",
+			    FactCustomerMetrics[Income] < 80000, "60-80k",
+			    FactCustomerMetrics[Income] < 120000, "80-120k",
+			    "120k+"
+			)
+		lineageTag: 49a59e49-1ab8-4b51-843d-defdb779e27f
+		summarizeBy: none
+		sortByColumn: 'Income Group Sort'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Income Group Sort' =
+			
+			SWITCH(
+			    TRUE(),
+			    FactCustomerMetrics[Income] < 15000, 1,
+			    FactCustomerMetrics[Income] < 30000, 2,
+			    FactCustomerMetrics[Income] < 45000, 3,
+			    FactCustomerMetrics[Income] < 60000, 4,
+			    FactCustomerMetrics[Income] < 80000, 5,
+			    FactCustomerMetrics[Income] < 120000, 6,
+			    7
+			)
+		formatString: 0
+		lineageTag: 1af9c796-96c6-451e-8746-517f6e68d3cb
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition FactCustomerMetrics = m
 		mode: import
 		source =

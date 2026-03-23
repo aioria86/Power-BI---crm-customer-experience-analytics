@@ -1,0 +1,29 @@
+table 'Product Category Table'
+	lineageTag: c30f5b0b-a613-40cb-915f-b0ed74ff0fa4
+
+	column Category
+		lineageTag: 9f788c23-396f-4bd4-9078-3273ee1d658c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Category]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Product Category Table' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Category", STRING,
+				    {
+				        {"Wines"},
+				        {"Meat"},
+				        {"Fish"},
+				        {"Fruits"},
+				        {"Sweets"},
+				        {"Gold"}
+				    }
+				)
+
+	annotation PBI_Id = b822db2529454db6aab6e7a9ca81529d
+
