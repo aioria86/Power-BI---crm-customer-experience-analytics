@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "cb1fae890af93a1176d9",
+  "position": {
+    "x": 70.447761194029852,
+    "y": 426.26865671641787,
+    "z": 4000,
+    "height": 162.08955223880596,
+    "width": 309.85074626865674
+  },
+  "visualGroup": {
+    "displayName": "KPI Campaign Conversion Rate",
+    "groupMode": "ScaleMode"
+  }
+}
