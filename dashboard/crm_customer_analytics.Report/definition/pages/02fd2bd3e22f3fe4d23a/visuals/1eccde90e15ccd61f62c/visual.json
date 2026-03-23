@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "1eccde90e15ccd61f62c",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 0,
+    "height": 720,
+    "width": 68.059701492537314,
+    "tabOrder": 0
+  },
+  "visualGroup": {
+    "displayName": "Grupo Barra Menu Lateral",
+    "groupMode": "ScaleMode"
+  }
+}

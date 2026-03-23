@@ -56,8 +56,98 @@
       "type": "RegisteredResources",
       "items": [
         {
+          "name": "analysis-logo012832426701730903.png",
+          "path": "analysis-logo012832426701730903.png",
+          "type": "Image"
+        },
+        {
+          "name": "Channel-purple702805934012026.png",
+          "path": "Channel-purple702805934012026.png",
+          "type": "Image"
+        },
+        {
+          "name": "Channel-white31973452062238805.png",
+          "path": "Channel-white31973452062238805.png",
+          "type": "Image"
+        },
+        {
+          "name": "Customer-purple13780605319221118.png",
+          "path": "Customer-purple13780605319221118.png",
+          "type": "Image"
+        },
+        {
+          "name": "Customer-white5226603503408812.png",
+          "path": "Customer-white5226603503408812.png",
+          "type": "Image"
+        },
+        {
+          "name": "Delete-Filter-red2836629892251664.png",
+          "path": "Delete-Filter-red2836629892251664.png",
+          "type": "Image"
+        },
+        {
+          "name": "Executive-purple7600079014694423.png",
+          "path": "Executive-purple7600079014694423.png",
+          "type": "Image"
+        },
+        {
+          "name": "Executive-white33919205962292953.png",
+          "path": "Executive-white33919205962292953.png",
+          "type": "Image"
+        },
+        {
+          "name": "Executive-white4374486309645965.png",
+          "path": "Executive-white4374486309645965.png",
+          "type": "Image"
+        },
+        {
+          "name": "Executive-white5743757494267793.png",
+          "path": "Executive-white5743757494267793.png",
+          "type": "Image"
+        },
+        {
+          "name": "Executive-white7305174936132207.png",
+          "path": "Executive-white7305174936132207.png",
+          "type": "Image"
+        },
+        {
+          "name": "Executive-white9104929451843369.png",
+          "path": "Executive-white9104929451843369.png",
+          "type": "Image"
+        },
+        {
           "name": "kpi-fond08177224311438225.png",
           "path": "kpi-fond08177224311438225.png",
+          "type": "Image"
+        },
+        {
+          "name": "Marketing-purple871586454188897.png",
+          "path": "Marketing-purple871586454188897.png",
+          "type": "Image"
+        },
+        {
+          "name": "Marketing-white68443649030831.png",
+          "path": "Marketing-white68443649030831.png",
+          "type": "Image"
+        },
+        {
+          "name": "Revenue-purple48717710331958375.png",
+          "path": "Revenue-purple48717710331958375.png",
+          "type": "Image"
+        },
+        {
+          "name": "Revenue-white025680383800815387.png",
+          "path": "Revenue-white025680383800815387.png",
+          "type": "Image"
+        },
+        {
+          "name": "RFM-purple0827221926731806.png",
+          "path": "RFM-purple0827221926731806.png",
+          "type": "Image"
+        },
+        {
+          "name": "RFM-white7829673984303838.png",
+          "path": "RFM-white7829673984303838.png",
           "type": "Image"
         }
       ]

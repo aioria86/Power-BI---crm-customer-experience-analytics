@@ -232,7 +232,7 @@ table Measures_Table
 		formatString: 0
 		lineageTag: ee979542-fe23-4525-940e-3c0cd1833921
 
-	measure 'Customer Growth' =
+	measure '% Customer Growth' =
 			
 			DIVIDE(
 			    [Total Customers] - [Total Customers Prev Month],
@@ -255,6 +255,108 @@ table Measures_Table
 			)
 		formatString: #,0
 		lineageTag: d50d9ac6-4e90-4116-8dae-06f47291e9a3
+
+	measure 'Total Revenue Prev Month' =
+			
+			CALCULATE(
+			    [Total Revenue],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 6cb719a8-67d9-4152-a6b2-f137ce5e96cf
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Total Revenue Variance' = [Total Revenue] - [Total Revenue Prev Month]
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: a62d6e78-21c7-4c60-9bf6-4a5fc4b2836a
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% Revenue Growth' =
+			
+			DIVIDE(
+			    [Total Revenue] - [Total Revenue Prev Month],
+			    [Total Revenue Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 703cc824-3339-41da-b714-bf986e4dbaf5
+
+	measure ARPC =
+			
+			DIVIDE(
+			    [Total Revenue],
+			    [Total Customers]
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 1d97d10c-49fd-4a2c-bbb8-49071ee03ebd
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'High Value Revenue' =
+			
+			CALCULATE(
+			    [Total Revenue],
+			    FactCustomerMetrics[Total_Spending] >
+			    AVERAGE(FactCustomerMetrics[Total_Spending])
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 8b558a1b-11b6-488f-9d78-1ee870d73d34
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% Revenue High Value' =
+			
+			DIVIDE(
+			    [High Value Revenue],
+			    [Total Revenue],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: bac8fcba-cd38-4df9-9d47-306666078963
+
+	measure 'Campaign Conversion Rate Prev Month' =
+			
+			CALCULATE(
+			    [Campaign Conversion Rate],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3607f474-1606-4a8a-90bd-b258d4f64f36
+
+	measure 'Campaign Conversion Rate Variance' = [Campaign Conversion Rate] - [Campaign Conversion Rate Prev Month]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a9f776f1-eed0-40a1-a35a-58e37af2324e
+
+	measure '% Campaign Conversion Rate Growth' =
+			
+			DIVIDE(
+			    [Campaign Conversion Rate] - [Campaign Conversion Rate Prev Month],
+			    [Campaign Conversion Rate Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 177a928e-e66c-4a77-b55c-541b86d3935b
+
+	measure 'Revenue per Response' =
+			
+			DIVIDE(
+			    [Total Revenue],
+			    [Campaign Responses]
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: d56bc92b-86e7-446a-8d9e-7329a9b7b19a
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	partition Measures_Table = m
 		mode: import
