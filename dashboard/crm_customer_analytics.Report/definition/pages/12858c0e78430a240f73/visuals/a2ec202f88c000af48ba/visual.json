@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "2d324b36b4238c7e14b1",
+  "name": "a2ec202f88c000af48ba",
   "position": {
-    "x": 207.85846320732941,
-    "y": 18.378761885376971,
+    "x": 208.44212185363588,
+    "y": 18.401679982767387,
     "z": 3000,
-    "height": 58.463667820069212,
-    "width": 93.5798319327731
+    "height": 58.536571318207848,
+    "width": 93.84260053591143
   },
   "visual": {
     "visualType": "cardVisual",
@@ -22,10 +22,10 @@
                       "Entity": "Measures_Table"
                     }
                   },
-                  "Property": "% Campaign Conversion Rate Growth"
+                  "Property": "% Avg Customer Income Growth"
                 }
               },
-              "queryRef": "Measures_Table.% Campaign Conversion Rate Growth",
+              "queryRef": "Measures_Table.% Avg Customer Income Growth",
               "nativeQueryRef": "MoM Growth",
               "displayName": "MoM Growth"
             }
@@ -42,7 +42,7 @@
                     "Entity": "Measures_Table"
                   }
                 },
-                "Property": "% Campaign Conversion Rate Growth"
+                "Property": "% Avg Customer Income Growth"
               }
             },
             "direction": "Descending"
@@ -79,7 +79,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Income Variance"
                                 }
                               },
                               "Right": {
@@ -108,7 +108,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Income Variance"
                                     }
                                   },
                                   "Right": {
@@ -128,7 +128,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Income Variance"
                                     }
                                   },
                                   "Right": {
@@ -157,7 +157,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Income Variance"
                                 }
                               },
                               "Right": {
@@ -305,7 +305,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Income Variance"
                                 }
                               },
                               "Right": {
@@ -334,7 +334,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Income Variance"
                                     }
                                   },
                                   "Right": {
@@ -354,7 +354,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Income Variance"
                                     }
                                   },
                                   "Right": {
@@ -383,7 +383,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Income Variance"
                                 }
                               },
                               "Right": {
@@ -463,5 +463,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "cb1fae890af93a1176d9"
+  "parentGroupName": "25899d51a4c522a980bc"
 }

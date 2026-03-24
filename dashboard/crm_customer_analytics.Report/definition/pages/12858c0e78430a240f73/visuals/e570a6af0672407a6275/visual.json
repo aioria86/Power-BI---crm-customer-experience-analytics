@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "e570a6af0672407a6275",
+  "position": {
+    "x": 69.991714995857492,
+    "y": 303.29743164871581,
+    "z": 3000,
+    "height": 194.06793703396852,
+    "width": 310.72079536039769
+  },
+  "visualGroup": {
+    "displayName": "KPI AVG Age",
+    "groupMode": "ScaleMode"
+  }
+}

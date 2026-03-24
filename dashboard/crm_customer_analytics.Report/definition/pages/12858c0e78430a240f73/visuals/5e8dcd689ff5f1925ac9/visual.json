@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "2d324b36b4238c7e14b1",
+  "name": "5e8dcd689ff5f1925ac9",
   "position": {
     "x": 207.85846320732941,
     "y": 18.378761885376971,
@@ -22,10 +22,10 @@
                       "Entity": "Measures_Table"
                     }
                   },
-                  "Property": "% Campaign Conversion Rate Growth"
+                  "Property": "% ARPC Growth"
                 }
               },
-              "queryRef": "Measures_Table.% Campaign Conversion Rate Growth",
+              "queryRef": "Measures_Table.% ARPC Growth",
               "nativeQueryRef": "MoM Growth",
               "displayName": "MoM Growth"
             }
@@ -42,7 +42,7 @@
                     "Entity": "Measures_Table"
                   }
                 },
-                "Property": "% Campaign Conversion Rate Growth"
+                "Property": "% ARPC Growth"
               }
             },
             "direction": "Descending"
@@ -79,7 +79,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "ARPC Variance"
                                 }
                               },
                               "Right": {
@@ -108,7 +108,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "ARPC Variance"
                                     }
                                   },
                                   "Right": {
@@ -128,7 +128,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "ARPC Variance"
                                     }
                                   },
                                   "Right": {
@@ -157,7 +157,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "ARPC Variance"
                                 }
                               },
                               "Right": {
@@ -305,7 +305,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "ARPC Variance"
                                 }
                               },
                               "Right": {
@@ -334,7 +334,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "ARPC Variance"
                                     }
                                   },
                                   "Right": {
@@ -354,7 +354,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "ARPC Variance"
                                     }
                                   },
                                   "Right": {
@@ -383,7 +383,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "ARPC Variance"
                                 }
                               },
                               "Right": {
@@ -463,5 +463,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "cb1fae890af93a1176d9"
+  "parentGroupName": "d9eabe04a4395544ad90"
 }
