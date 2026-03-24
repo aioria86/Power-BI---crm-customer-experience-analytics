@@ -372,6 +372,155 @@ table Measures_Table
 		formatString: 0
 		lineageTag: 97d8149f-6816-4f73-a098-a54acc42a960
 
+	measure 'Avg Customer Income Prev Month' =
+			
+			CALCULATE(
+			    [Avg Customer Income],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: a6243561-1dde-4673-bcd1-cf4b0a156fb4
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Median Income' = MEDIAN(FactCustomerMetrics[Income])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 7f95eaec-1c34-43b9-a185-314884a1c76d
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure '% High Income' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			        FactCustomerMetrics[Income] >= 80000
+			    ),
+			    [Total Customers]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 2835beef-9acb-4fe8-af6c-c85d000307cf
+
+	measure 'Avg Customer Income Variance' = [Avg Customer Income] - [Avg Customer Income Prev Month]
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 3e6fda3d-a814-45eb-86af-b2ffe403e142
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure '% Avg Customer Income Growth' =
+			
+			DIVIDE(
+			    [Avg Customer Income] - [Avg Customer Income Prev Month],
+			    [Avg Customer Income Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9817cadc-7b9c-413b-92e5-2eb749617351
+
+	measure 'Avg Customer Age Previous Month' =
+			
+			CALCULATE(
+			    [Avg Customer Age],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00
+		lineageTag: c826e9e9-1954-48e2-8184-e9dafe19fdc7
+
+	measure 'Avg Customer Age Variance' = [Avg Customer Age] - [Avg Customer Age Previous Month]
+		formatString: 0.00
+		lineageTag: 68f9e6d7-6a54-4d78-8375-e012f89f1a7b
+
+	measure '% Avg Customer Age Growth' =
+			
+			DIVIDE(
+			    [Avg Customer Age] - [Avg Customer Age Previous Month],
+			    [Avg Customer Age Previous Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 53f7e792-e44a-4749-8f39-e0e79b5d5e77
+
+	measure 'Median Age' = MEDIAN(DimCustomer[Age])
+		lineageTag: fadc9310-323e-43d0-93cb-246ad051d1e6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Core Age (30-55)' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			        DimCustomer[Age] >= 30 &&
+			        DimCustomer[Age] <= 55
+			    ),
+			    [Total Customers]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: ff150cb9-61b7-4dc3-bdb7-d7f924b07ee8
+
+	measure 'ARPC Prev Month' =
+			
+			CALCULATE(
+			    [ARPC],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 050ff77b-6971-49f4-b661-fe1008a65cc5
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'ARPC Variance' = [ARPC] - [ARPC Prev Month]
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: b824ede0-9826-4225-9a56-2d9a4a60b4a6
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% ARPC Growth' =
+			
+			DIVIDE(
+			    [ARPC] - [ARPC Prev Month],
+			    [ARPC Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: cc65f493-e994-40cb-b628-4878e9904fa3
+
+	measure '% High Value Customers' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			        FactCustomerMetrics[Total_Spending] > 1000
+			    ),
+			    [Total Customers]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9261db58-32a1-48ba-a5bc-34362bdcda59
+
+	measure '% Top Segment Revenue' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        [Total Revenue],
+			        DimCustomer[Age_segment] = "Mature"
+			    ),
+			    [Total Revenue]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 27c2844f-bb3c-463e-9052-daa6c3d856ad
+
 	partition Measures_Table = m
 		mode: import
 		source =

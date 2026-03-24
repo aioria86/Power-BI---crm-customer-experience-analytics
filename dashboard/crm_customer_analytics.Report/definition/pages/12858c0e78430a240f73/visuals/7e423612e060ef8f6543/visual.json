@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "2d324b36b4238c7e14b1",
+  "name": "7e423612e060ef8f6543",
   "position": {
     "x": 207.85846320732941,
-    "y": 18.378761885376971,
+    "y": 18.437997872206704,
     "z": 3000,
-    "height": 58.463667820069212,
+    "height": 58.652100157274866,
     "width": 93.5798319327731
   },
   "visual": {
@@ -22,10 +22,10 @@
                       "Entity": "Measures_Table"
                     }
                   },
-                  "Property": "% Campaign Conversion Rate Growth"
+                  "Property": "% Avg Customer Age Growth"
                 }
               },
-              "queryRef": "Measures_Table.% Campaign Conversion Rate Growth",
+              "queryRef": "Measures_Table.% Avg Customer Age Growth",
               "nativeQueryRef": "MoM Growth",
               "displayName": "MoM Growth"
             }
@@ -42,7 +42,7 @@
                     "Entity": "Measures_Table"
                   }
                 },
-                "Property": "% Campaign Conversion Rate Growth"
+                "Property": "% Avg Customer Age Growth"
               }
             },
             "direction": "Descending"
@@ -79,7 +79,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Age Variance"
                                 }
                               },
                               "Right": {
@@ -108,7 +108,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Age Variance"
                                     }
                                   },
                                   "Right": {
@@ -128,7 +128,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Age Variance"
                                     }
                                   },
                                   "Right": {
@@ -157,7 +157,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Age Variance"
                                 }
                               },
                               "Right": {
@@ -305,7 +305,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Age Variance"
                                 }
                               },
                               "Right": {
@@ -334,7 +334,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Age Variance"
                                     }
                                   },
                                   "Right": {
@@ -354,7 +354,7 @@
                                           "Entity": "Measures_Table"
                                         }
                                       },
-                                      "Property": "Campaign Conversion Rate Variance"
+                                      "Property": "Avg Customer Age Variance"
                                     }
                                   },
                                   "Right": {
@@ -383,7 +383,7 @@
                                       "Entity": "Measures_Table"
                                     }
                                   },
-                                  "Property": "Campaign Conversion Rate Variance"
+                                  "Property": "Avg Customer Age Variance"
                                 }
                               },
                               "Right": {
@@ -463,5 +463,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "cb1fae890af93a1176d9"
+  "parentGroupName": "e570a6af0672407a6275"
 }

@@ -26,8 +26,8 @@
                 }
               },
               "queryRef": "Measures_Table.Customer Growth",
-              "nativeQueryRef": "Growth",
-              "displayName": "Growth"
+              "nativeQueryRef": "MoM Growth",
+              "displayName": "MoM Growth"
             }
           ]
         }

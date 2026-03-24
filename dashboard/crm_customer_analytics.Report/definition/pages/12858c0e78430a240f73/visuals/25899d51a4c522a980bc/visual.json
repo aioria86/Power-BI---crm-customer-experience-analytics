@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "25899d51a4c522a980bc",
+  "position": {
+    "x": 70.345208505937563,
+    "y": 91.2013256006628,
+    "z": 2000,
+    "height": 199.37033968516982,
+    "width": 310.72079536039769
+  },
+  "visualGroup": {
+    "displayName": "KPI AVG Income",
+    "groupMode": "ScaleMode"
+  }
+}
