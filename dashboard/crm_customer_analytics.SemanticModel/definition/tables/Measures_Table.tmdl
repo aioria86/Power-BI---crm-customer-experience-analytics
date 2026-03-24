@@ -676,6 +676,32 @@ table Measures_Table
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
+	measure 'Total Spending' = SUM(FactCustomerMetrics[Total_Spending])
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 75925073-0f2b-42d4-85a6-1d41ade8a2d2
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue % by Category' =
+			
+			DIVIDE(
+			    [Revenue Selected Category],
+			    [Total Revenue]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 744dfc17-d1d6-4358-8fe8-3859f655877f
+
+	measure 'Category Rank' =
+			
+			RANKX(
+			    ALL('Product Category Table'[Category]),
+			    [Revenue Selected Category],
+			    ,
+			    DESC
+			)
+		formatString: 0
+		lineageTag: ab1fad52-6eb0-42bb-8b46-ccd223bd4cb5
+
 	partition Measures_Table = m
 		mode: import
 		source =

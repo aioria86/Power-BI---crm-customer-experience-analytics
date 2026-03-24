@@ -25,7 +25,7 @@ expression marketing_campaign =
 		    #"Tipo cambiado6" = Table.TransformColumnTypes(#"Personalizada agregada5",{{"Total_Children", Int64.Type}}),
 		    #"Columnas con nombre cambiado1" = Table.RenameColumns(#"Tipo cambiado6",{{"Engagement Score", "Engagement_Score"}}),
 		    #"Columna condicional agregada3" = Table.AddColumn(#"Columnas con nombre cambiado1", "Engagement_Score_segment", each if [Engagement_Score] >= 21 then "Champions" else if [Engagement_Score] >= 11 then "High Engagement" else if [Engagement_Score] >= 4 then "Medium Engagement" else if [Engagement_Score] >= 1 then "Low Engagement" else "No Engagement"),
-		    #"Tipo cambiado7" = Table.TransformColumnTypes(#"Columna condicional agregada3",{{"Engagement_Score_segment", type text}})
+		    #"Tipo cambiado7" = Table.TransformColumnTypes(#"Columna condicional agregada3",{{"Engagement_Score_segment", type text}, {"ID", type text}})
 		in
 		    #"Tipo cambiado7"
 	lineageTag: ae9cb267-34fb-4fb1-9180-049ca69745fd

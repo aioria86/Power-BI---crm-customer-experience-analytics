@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "de7222c49cccf77920b7",
+  "name": "185367ac8fa0556ad8d6",
   "position": {
-    "x": 815.45454545454538,
-    "y": 403.63636363636363,
-    "z": 4004,
-    "height": 311.81818181818181,
-    "width": 455.45454545454544,
-    "tabOrder": 8004
+    "x": 390.90909090909088,
+    "y": 91.818181818181813,
+    "z": 4001,
+    "height": 289.09090909090907,
+    "width": 423.63636363636363,
+    "tabOrder": 8001
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "donutChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimCustomer"
+                      "Entity": "FactCustomerMetrics"
                     }
                   },
-                  "Property": "Age_segment"
+                  "Property": "Engagement_Score_segment"
                 }
               },
-              "queryRef": "DimCustomer.Age_segment",
-              "nativeQueryRef": "Age_segment",
+              "queryRef": "FactCustomerMetrics.Engagement_Score_segment",
+              "nativeQueryRef": "Engagement_Score_segment",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "Measures_Table"
                     }
                   },
-                  "Property": "ARPC"
+                  "Property": "Total Revenue"
                 }
               },
-              "queryRef": "Measures_Table.ARPC",
-              "nativeQueryRef": "ARPC",
+              "queryRef": "Measures_Table.Total Revenue",
+              "nativeQueryRef": "Total Revenue",
               "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
             }
           ]
@@ -62,7 +62,7 @@
                     "Entity": "Measures_Table"
                   }
                 },
-                "Property": "ARPC"
+                "Property": "Total Revenue"
               }
             },
             "direction": "Descending"
@@ -72,13 +72,20 @@
       }
     },
     "objects": {
-      "categoryAxis": [
+      "legend": [
         {
           "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bottom'"
+                }
+              }
+            },
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Age Segment'"
+                  "Value": "'Score Segment'"
                 }
               }
             }
@@ -88,30 +95,35 @@
       "labels": [
         {
           "properties": {
-            "show": {
+            "labelStyle": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
+                  "Value": "'Percent of total'"
                 }
               }
             }
           }
         }
       ],
-      "valueAxis": [
+      "dataPoint": [
         {
           "properties": {
-            "gridlineShow": {
+            "borderShow": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -120,58 +132,6 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'ARPC by Age Segment'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'ARPC performance across different age groups'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.3
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
       "border": [
         {
           "properties": {
@@ -206,6 +166,58 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Revenue by Engagement Segment'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Revenue contribution across customer engagement levels'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
                 }
               }
             }

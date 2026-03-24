@@ -2,9 +2,8 @@ table FactCustomerMetrics
 	lineageTag: f2b25773-4769-4baa-8a83-d105ffedb23c
 
 	column ID
-		dataType: int64
+		dataType: string
 		isHidden
-		formatString: 0
 		lineageTag: c11f4100-3e28-45a2-8928-a583edc753ca
 		summarizeBy: none
 		sourceColumn: ID

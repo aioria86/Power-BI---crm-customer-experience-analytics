@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "de7222c49cccf77920b7",
+  "name": "ffacb21610c56c313ffa",
   "position": {
-    "x": 815.45454545454538,
-    "y": 403.63636363636363,
+    "x": 823.63636363636363,
+    "y": 91.818181818181813,
     "z": 4004,
-    "height": 311.81818181818181,
-    "width": 455.45454545454544,
+    "height": 289.09090909090907,
+    "width": 447.27272727272725,
     "tabOrder": 8004
   },
   "visual": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "DimCustomer"
+                      "Entity": "Product Category Table"
                     }
                   },
-                  "Property": "Age_segment"
+                  "Property": "Category"
                 }
               },
-              "queryRef": "DimCustomer.Age_segment",
-              "nativeQueryRef": "Age_segment",
+              "queryRef": "Product Category Table.Category",
+              "nativeQueryRef": "Category",
               "active": true
             }
           ]
@@ -42,12 +42,11 @@
                       "Entity": "Measures_Table"
                     }
                   },
-                  "Property": "ARPC"
+                  "Property": "Revenue % by Category"
                 }
               },
-              "queryRef": "Measures_Table.ARPC",
-              "nativeQueryRef": "ARPC",
-              "format": "\\$#,0.00;(\\$#,0.00);\\$#,0.00"
+              "queryRef": "Measures_Table.Revenue % by Category",
+              "nativeQueryRef": "Revenue % by Category"
             }
           ]
         }
@@ -62,7 +61,7 @@
                     "Entity": "Measures_Table"
                   }
                 },
-                "Property": "ARPC"
+                "Property": "Revenue % by Category"
               }
             },
             "direction": "Descending"
@@ -72,19 +71,6 @@
       }
     },
     "objects": {
-      "categoryAxis": [
-        {
-          "properties": {
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Age Segment'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -94,24 +80,17 @@
                   "Value": "true"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
             }
           }
         }
       ],
-      "valueAxis": [
+      "categoryAxis": [
         {
           "properties": {
-            "gridlineShow": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Product Category'"
                 }
               }
             }
@@ -126,7 +105,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ARPC by Age Segment'"
+                  "Value": "'Revenue Contribution by Product Category'"
                 }
               }
             }
@@ -146,7 +125,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'ARPC performance across different age groups'"
+                  "Value": "'Percentage share of total revenue highlighting category concentration'"
                 }
               }
             },
