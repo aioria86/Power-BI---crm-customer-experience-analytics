@@ -521,6 +521,18 @@ table Measures_Table
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 27c2844f-bb3c-463e-9052-daa6c3d856ad
 
+	measure 'Total Income' = SUM(FactCustomerMetrics[Income])
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: 792366bf-1ec2-480c-a03d-4bd577dfa02c
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
+
+	measure 'Avg Spending' = AVERAGE(FactCustomerMetrics[Total_Spending])
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 0b9091fb-7da8-4e38-9700-17e68baa95fb
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
 	partition Measures_Table = m
 		mode: import
 		source =
