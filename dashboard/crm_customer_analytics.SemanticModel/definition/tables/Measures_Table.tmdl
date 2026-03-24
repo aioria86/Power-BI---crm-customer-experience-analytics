@@ -42,7 +42,8 @@ table Measures_Table
 			
 			DIVIDE(
 			    [Total Revenue],
-			    SUM(FactCustomerMetrics[Total_Purchases])
+			    [Total Purchases],
+			    0
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
 		displayFolder: KPIs\Revenue KPIs
@@ -532,6 +533,148 @@ table Measures_Table
 		lineageTag: 0b9091fb-7da8-4e38-9700-17e68baa95fb
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Top Product Revenue %' =
+			
+			DIVIDE(
+			    MAXX(
+			        VALUES('Product Category Table'[Category]),
+			        [Revenue Selected Category]
+			    ),
+			    [Total Revenue]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: f851b2e4-19b8-4b07-bf58-d5e0e4e7470e
+
+	measure 'Avg Purchase Value Prev Month' =
+			
+			CALCULATE(
+			    [Avg Purchase Value],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 8b6e25f2-9185-46db-a8c2-adfe3ee47330
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Avg Purchase Value Variance' = [Avg Purchase Value] - [Avg Purchase Value Prev Month]
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: f7722c7c-9832-4dda-9601-0da89be20384
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% Avg Purchase Value Growth' =
+			
+			DIVIDE(
+			    [Avg Purchase Value] - [Avg Purchase Value Prev Month],
+			    [Avg Purchase Value Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1363bd79-0b13-4bfd-b55b-1e165fe24821
+
+	measure 'High Value Transactions %' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS(FactCustomerMetrics),
+			        FactCustomerMetrics[Total_Spending] > 500
+			    ),
+			    COUNTROWS(FactCustomerMetrics)
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b3caa458-0395-46d9-9a81-bab925896675
+
+	measure 'Revenue Concentration %' =
+			
+			VAR MaxRevenue =
+			    MAXX(
+			        {
+			            [Revenue Wines],
+			            [Revenue Meat],
+			            [Revenue Gold],
+			            [Revenue Fish],
+			            [Revenue Fruits],
+			            [Revenue Sweets]
+			        },
+			        [Value]
+			    )
+			RETURN
+			DIVIDE(
+			    MaxRevenue,
+			    [Total Revenue]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 0a20d7f5-9cfe-46b8-8453-e18cac813adc
+
+	measure 'Active Categories' =
+			
+			CALCULATE(
+			    COUNTROWS(
+			        FILTER(
+			            {
+			                [Revenue Wines],
+			                [Revenue Meat],
+			                [Revenue Gold],
+			                [Revenue Fish],
+			                [Revenue Fruits],
+			                [Revenue Sweets]
+			            },
+			            [Value] > 0
+			        )
+			    )
+			)
+		formatString: 0
+		lineageTag: af521085-f2ea-4e76-ace0-77a75f4dc38a
+
+	measure 'Revenue Concentration % Prev Month' =
+			
+			CALCULATE(
+			    [Revenue Concentration %],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: d3d097f6-ee1d-4ce8-a354-2a82cf5f3b4e
+
+	measure 'Revenue Concentration % Variance' = [Revenue Concentration %] - [Revenue Concentration % Prev Month]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 89d84ad9-1ccf-4dfe-8329-59902c721b14
+
+	measure '% Revenue Concentration Growth' =
+			
+			DIVIDE(
+			    [Revenue Concentration %] - [Revenue Concentration % Prev Month],
+			    [Revenue Concentration % Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: db024b32-a1c9-44c9-bbd1-649155768fc7
+
+	measure 'Top Product Revenue' =
+			
+			MAXX(
+			    {
+			        [Revenue Wines],
+			        [Revenue Meat],
+			        [Revenue Gold],
+			        [Revenue Fish],
+			        [Revenue Fruits],
+			        [Revenue Sweets]
+			    },
+			    [Value]
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		lineageTag: eee18120-33b9-475b-a832-e5972ea9a9aa
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	partition Measures_Table = m
 		mode: import

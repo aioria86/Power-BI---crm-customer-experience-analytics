@@ -1,0 +1,15 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
+  "name": "f7557fbbe1938fe4985e",
+  "position": {
+    "x": 69.991714995857492,
+    "y": 303.29743164871581,
+    "z": 2000,
+    "height": 194.06793703396852,
+    "width": 310.72079536039769
+  },
+  "visualGroup": {
+    "displayName": "KPI APV",
+    "groupMode": "ScaleMode"
+  }
+}
