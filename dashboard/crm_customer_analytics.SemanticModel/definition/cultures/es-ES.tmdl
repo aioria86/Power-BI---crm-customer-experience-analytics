@@ -1312,7 +1312,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "point": {
+			          "tier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -4015,7 +4015,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "point": {
+			          "tier": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -14017,12 +14017,6 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "channel": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "top channel": {
 			            "State": "Generated",
 			            "Weight": 0.97
@@ -14142,6 +14136,1097 @@ cultureInfo es-ES
 			              "Agent": "PowerBI.VisualColumnRename"
 			            },
 			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics.deals_purchases": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "FactCustomerMetrics",
+			          "ConceptualProperty": "Deals Purchases"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "deals purchases": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purchases": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "deal procurement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "deal consumption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "procurement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consumption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "deal acquisition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "acquisition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "deal foothold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "deal toehold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "foothold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "toehold": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.purchases_by_channel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Purchases by Channel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "purchases by channel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "purchases": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "procurement by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "consumption by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "acquisition by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "procurement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consumption": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "foothold by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "toehold by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "acquisition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "grip by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "grasp by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.revenue_by_channel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Revenue by Channel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue by channel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "revenue": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "profit by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "turnover by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "yield by channel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.deals_purchase_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Deals Purchase %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "deals purchase %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "deal purchase percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "deal purchase pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.max_conversion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Max Conversion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "max conversion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conversion": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "maximum conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "max adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max translation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max renovation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max transfiguration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "translation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.min_conversion": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Min Conversion"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "min conversion": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "conversion": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "minimum conversion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "min adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min translation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min renovation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min transformation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min transfiguration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "adaptation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "translation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.max_point": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Max Point"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "max point": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "point": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "maximum point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "max opinion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max argument": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "max topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "opinion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "argument": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Peak Conversion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.min_point": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Min Point"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "min point": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "point": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "minimum point": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "min opinion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min argument": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "min topic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "opinion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "idea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "argument": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "Lowest Conversion": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "channel_table": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Channel Table"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "channel table": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "channel tabletop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "channel bench": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel board": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel counter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel stand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel slab": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel desk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel stall": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel table top": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "channel spreadsheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "channel_table.channel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Channel Table",
+			          "ConceptualProperty": "Channel"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "channel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "station": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "network": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "conduit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "waterway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "canal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "strait": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "passage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
 			          }
 			        }
 			      ]
@@ -14295,6 +15380,501 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_age_groups_have_dim_customers"
+			        }
+			      ]
+			    },
+			    "channel_table_has_channel": {
+			      "Binding": {
+			        "ConceptualEntity": "Channel Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "channel_table": {
+			          "Target": {
+			            "Entity": "channel_table"
+			          }
+			        },
+			        "channel_table.channel": {
+			          "Target": {
+			            "Entity": "channel_table.channel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "channel_table"
+			            },
+			            "Object": {
+			              "Role": "channel_table.channel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "channel_tables_have_channels"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_min_point": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.min_point": {
+			          "Target": {
+			            "Entity": "measures_table.min_point"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.min_point"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_min_point"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_min_point": {
+			      "Binding": {
+			        "ConceptualEntity": "DimDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.min_point": {
+			          "Target": {
+			            "Entity": "measures_table.min_point"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.min_point"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_min_point"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_max_point": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.max_point": {
+			          "Target": {
+			            "Entity": "measures_table.max_point"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.max_point"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_max_point"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_max_point": {
+			      "Binding": {
+			        "ConceptualEntity": "DimDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.max_point": {
+			          "Target": {
+			            "Entity": "measures_table.max_point"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.max_point"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_max_point"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_min_conversion": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.min_conversion": {
+			          "Target": {
+			            "Entity": "measures_table.min_conversion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.min_conversion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_min_conversion"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_min_conversion": {
+			      "Binding": {
+			        "ConceptualEntity": "DimDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.min_conversion": {
+			          "Target": {
+			            "Entity": "measures_table.min_conversion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.min_conversion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_min_conversion"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_max_conversion": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.max_conversion": {
+			          "Target": {
+			            "Entity": "measures_table.max_conversion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.max_conversion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_max_conversion"
+			        }
+			      ]
+			    },
+			    "dim_date_has_measures_table_max_conversion": {
+			      "Binding": {
+			        "ConceptualEntity": "DimDate"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_date": {
+			          "Target": {
+			            "Entity": "dim_date"
+			          }
+			        },
+			        "measures_table.max_conversion": {
+			          "Target": {
+			            "Entity": "measures_table.max_conversion"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_date"
+			            },
+			            "Object": {
+			              "Role": "measures_table.max_conversion"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_dates_have_max_conversion"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_deals_purchase_": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.deals_purchase_": {
+			          "Target": {
+			            "Entity": "measures_table.deals_purchase_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.deals_purchase_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_deals_purchase_"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_revenue_by_channel": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.revenue_by_channel": {
+			          "Target": {
+			            "Entity": "measures_table.revenue_by_channel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.revenue_by_channel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_revenue_by_channel"
+			        }
+			      ]
+			    },
+			    "channel_table_has_measures_table_revenue_by_channel": {
+			      "Binding": {
+			        "ConceptualEntity": "Channel Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "channel_table": {
+			          "Target": {
+			            "Entity": "channel_table"
+			          }
+			        },
+			        "measures_table.revenue_by_channel": {
+			          "Target": {
+			            "Entity": "measures_table.revenue_by_channel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "channel_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.revenue_by_channel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "channel_tables_have_revenue_by_channel"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_purchases_by_channel": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.purchases_by_channel": {
+			          "Target": {
+			            "Entity": "measures_table.purchases_by_channel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.purchases_by_channel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_purchases_by_channel"
+			        }
+			      ]
+			    },
+			    "channel_table_has_measures_table_purchases_by_channel": {
+			      "Binding": {
+			        "ConceptualEntity": "Channel Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "channel_table": {
+			          "Target": {
+			            "Entity": "channel_table"
+			          }
+			        },
+			        "measures_table.purchases_by_channel": {
+			          "Target": {
+			            "Entity": "measures_table.purchases_by_channel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "channel_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.purchases_by_channel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "channel_tables_have_purchases_by_channel"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_deals_purchases": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "fact_customer_metrics.deals_purchases": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics.deals_purchases"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "fact_customer_metrics.deals_purchases"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_deals_purchases"
 			        }
 			      ]
 			    },
