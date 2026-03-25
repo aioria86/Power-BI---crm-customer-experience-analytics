@@ -227,10 +227,12 @@ table Measures_Table
 			        MONTH
 			    ))
 		formatString: #,0
+		displayFolder: Growth & Time Intelligence\Customers
 		lineageTag: 39fefa91-79df-43c0-bdb6-1956f2509fbb
 
 	measure 'Total Customers Variance' = [Total Customers] - [Total Customers Prev Month]
 		formatString: 0
+		displayFolder: Growth & Time Intelligence\Customers
 		lineageTag: ee979542-fe23-4525-940e-3c0cd1833921
 
 	measure '% Customer Growth' =
@@ -241,6 +243,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Customers
 		lineageTag: 2a4157e5-a1c7-4aa4-bbfc-9737ac2bd697
 
 	measure 'New Customers' =
@@ -255,6 +258,7 @@ table Measures_Table
 			    )
 			)
 		formatString: #,0
+		displayFolder: Growth & Time Intelligence\Customers
 		lineageTag: d50d9ac6-4e90-4116-8dae-06f47291e9a3
 
 	measure 'Total Revenue Prev Month' =
@@ -268,12 +272,14 @@ table Measures_Table
 			    )
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue
 		lineageTag: 6cb719a8-67d9-4152-a6b2-f137ce5e96cf
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	measure 'Total Revenue Variance' = [Total Revenue] - [Total Revenue Prev Month]
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue
 		lineageTag: a62d6e78-21c7-4c60-9bf6-4a5fc4b2836a
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -286,6 +292,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Revenue
 		lineageTag: 703cc824-3339-41da-b714-bf986e4dbaf5
 
 	measure ARPC =
@@ -295,6 +302,7 @@ table Measures_Table
 			    [Total Customers]
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\ARPC
 		lineageTag: 1d97d10c-49fd-4a2c-bbb8-49071ee03ebd
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -307,6 +315,7 @@ table Measures_Table
 			    AVERAGE(FactCustomerMetrics[Total_Spending])
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Revenue Analysis
 		lineageTag: 8b558a1b-11b6-488f-9d78-1ee870d73d34
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -319,6 +328,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Revenue Analysis
 		lineageTag: bac8fcba-cd38-4df9-9d47-306666078963
 
 	measure 'Campaign Conversion Rate Prev Month' =
@@ -332,10 +342,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Campaign
 		lineageTag: 3607f474-1606-4a8a-90bd-b258d4f64f36
 
 	measure 'Campaign Conversion Rate Variance' = [Campaign Conversion Rate] - [Campaign Conversion Rate Prev Month]
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Campaign
 		lineageTag: a9f776f1-eed0-40a1-a35a-58e37af2324e
 
 	measure '% Campaign Conversion Rate Growth' =
@@ -346,6 +358,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Campaign
 		lineageTag: 177a928e-e66c-4a77-b55c-541b86d3935b
 
 	measure 'Revenue per Response' =
@@ -355,6 +368,7 @@ table Measures_Table
 			    [Campaign Responses]
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Marketing Campaign KPIs
 		lineageTag: d56bc92b-86e7-446a-8d9e-7329a9b7b19a
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -371,6 +385,7 @@ table Measures_Table
 			    "Gold", [Revenue Gold]
 			)
 		formatString: 0
+		displayFolder: Revenue Analysis
 		lineageTag: 97d8149f-6816-4f73-a098-a54acc42a960
 
 	measure 'Avg Customer Income Prev Month' =
@@ -384,12 +399,14 @@ table Measures_Table
 			    )
 			)
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Growth & Time Intelligence\Income
 		lineageTag: a6243561-1dde-4673-bcd1-cf4b0a156fb4
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	measure 'Median Income' = MEDIAN(FactCustomerMetrics[Income])
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Customer KPIs
 		lineageTag: 7f95eaec-1c34-43b9-a185-314884a1c76d
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
@@ -404,10 +421,12 @@ table Measures_Table
 			    [Total Customers]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: KPIs\Customer KPIs
 		lineageTag: 2835beef-9acb-4fe8-af6c-c85d000307cf
 
 	measure 'Avg Customer Income Variance' = [Avg Customer Income] - [Avg Customer Income Prev Month]
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Growth & Time Intelligence\Income
 		lineageTag: 3e6fda3d-a814-45eb-86af-b2ffe403e142
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
@@ -420,6 +439,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Income
 		lineageTag: 9817cadc-7b9c-413b-92e5-2eb749617351
 
 	measure 'Avg Customer Age Previous Month' =
@@ -433,10 +453,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00
+		displayFolder: Growth & Time Intelligence\Age
 		lineageTag: c826e9e9-1954-48e2-8184-e9dafe19fdc7
 
 	measure 'Avg Customer Age Variance' = [Avg Customer Age] - [Avg Customer Age Previous Month]
 		formatString: 0.00
+		displayFolder: Growth & Time Intelligence\Age
 		lineageTag: 68f9e6d7-6a54-4d78-8375-e012f89f1a7b
 
 	measure '% Avg Customer Age Growth' =
@@ -447,9 +469,11 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Age
 		lineageTag: 53f7e792-e44a-4749-8f39-e0e79b5d5e77
 
 	measure 'Median Age' = MEDIAN(DimCustomer[Age])
+		displayFolder: KPIs\Customer KPIs
 		lineageTag: fadc9310-323e-43d0-93cb-246ad051d1e6
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -465,6 +489,7 @@ table Measures_Table
 			    [Total Customers]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: KPIs\Customer KPIs
 		lineageTag: ff150cb9-61b7-4dc3-bdb7-d7f924b07ee8
 
 	measure 'ARPC Prev Month' =
@@ -478,12 +503,14 @@ table Measures_Table
 			    )
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\ARPC
 		lineageTag: 050ff77b-6971-49f4-b661-fe1008a65cc5
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	measure 'ARPC Variance' = [ARPC] - [ARPC Prev Month]
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\ARPC
 		lineageTag: b824ede0-9826-4225-9a56-2d9a4a60b4a6
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -496,6 +523,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\ARPC
 		lineageTag: cc65f493-e994-40cb-b628-4878e9904fa3
 
 	measure '% High Value Customers' =
@@ -508,6 +536,7 @@ table Measures_Table
 			    [Total Customers]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 9261db58-32a1-48ba-a5bc-34362bdcda59
 
 	measure '% Top Segment Revenue' =
@@ -520,16 +549,19 @@ table Measures_Table
 			    [Total Revenue]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Revenue Analysis
 		lineageTag: 27c2844f-bb3c-463e-9052-daa6c3d856ad
 
 	measure 'Total Income' = SUM(FactCustomerMetrics[Income])
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: KPIs\Revenue KPIs
 		lineageTag: 792366bf-1ec2-480c-a03d-4bd577dfa02c
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	measure 'Avg Spending' = AVERAGE(FactCustomerMetrics[Total_Spending])
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Revenue KPIs
 		lineageTag: 0b9091fb-7da8-4e38-9700-17e68baa95fb
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -544,6 +576,7 @@ table Measures_Table
 			    [Total Revenue]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Revenue Analysis
 		lineageTag: f851b2e4-19b8-4b07-bf58-d5e0e4e7470e
 
 	measure 'Avg Purchase Value Prev Month' =
@@ -557,12 +590,14 @@ table Measures_Table
 			    )
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Purchase Value
 		lineageTag: 8b6e25f2-9185-46db-a8c2-adfe3ee47330
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	measure 'Avg Purchase Value Variance' = [Avg Purchase Value] - [Avg Purchase Value Prev Month]
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Purchase Value
 		lineageTag: f7722c7c-9832-4dda-9601-0da89be20384
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -575,6 +610,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Purchase Value
 		lineageTag: 1363bd79-0b13-4bfd-b55b-1e165fe24821
 
 	measure 'High Value Transactions %' =
@@ -587,6 +623,7 @@ table Measures_Table
 			    COUNTROWS(FactCustomerMetrics)
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: KPIs\Purchase Behavior KPIs
 		lineageTag: b3caa458-0395-46d9-9a81-bab925896675
 
 	measure 'Revenue Concentration %' =
@@ -609,6 +646,7 @@ table Measures_Table
 			    [Total Revenue]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Revenue Analysis
 		lineageTag: 0a20d7f5-9cfe-46b8-8453-e18cac813adc
 
 	measure 'Active Categories' =
@@ -629,6 +667,7 @@ table Measures_Table
 			    )
 			)
 		formatString: 0
+		displayFolder: Revenue Analysis
 		lineageTag: af521085-f2ea-4e76-ace0-77a75f4dc38a
 
 	measure 'Revenue Concentration % Prev Month' =
@@ -642,10 +681,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Revenue Concentration
 		lineageTag: d3d097f6-ee1d-4ce8-a354-2a82cf5f3b4e
 
 	measure 'Revenue Concentration % Variance' = [Revenue Concentration %] - [Revenue Concentration % Prev Month]
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Revenue Concentration
 		lineageTag: 89d84ad9-1ccf-4dfe-8329-59902c721b14
 
 	measure '% Revenue Concentration Growth' =
@@ -656,6 +697,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Revenue Concentration
 		lineageTag: db024b32-a1c9-44c9-bbd1-649155768fc7
 
 	measure 'Top Product Revenue' =
@@ -672,12 +714,14 @@ table Measures_Table
 			    [Value]
 			)
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Analysis
 		lineageTag: eee18120-33b9-475b-a832-e5972ea9a9aa
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	measure 'Total Spending' = SUM(FactCustomerMetrics[Total_Spending])
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: KPIs\Revenue KPIs
 		lineageTag: 75925073-0f2b-42d4-85a6-1d41ade8a2d2
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -689,6 +733,7 @@ table Measures_Table
 			    [Total Revenue]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Revenue Analysis
 		lineageTag: 744dfc17-d1d6-4358-8fe8-3859f655877f
 
 	measure 'Category Rank' =
@@ -700,6 +745,7 @@ table Measures_Table
 			    DESC
 			)
 		formatString: 0
+		displayFolder: Revenue Analysis
 		lineageTag: ab1fad52-6eb0-42bb-8b46-ccd223bd4cb5
 
 	measure 'Web Conversion Rate' =
@@ -710,6 +756,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Channel Performance
 		lineageTag: 9c27ec4d-ed06-444f-9a9a-3809311e7487
 
 	measure 'Web Conversion Rate Prev Month' =
@@ -723,10 +770,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Channel
 		lineageTag: 60540bcc-92b1-454f-8057-0c913a8edb7f
 
 	measure 'Web Conversion Rate Variance' = [Web Conversion Rate] - [Web Conversion Rate Prev Month]
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Channel
 		lineageTag: edce83e1-8546-4b7a-864e-5cbd0f12c2f5
 
 	measure '% Web Conversion Rate Growth' =
@@ -737,6 +786,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Channel
 		lineageTag: 193e30bb-5b1b-4c03-a247-11d6affa068d
 
 	measure 'Total Purchases Prev Month' =
@@ -750,10 +800,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00
+		displayFolder: Growth & Time Intelligence\Purchases
 		lineageTag: ffd098dc-cbd3-494c-b637-53f6b5313c41
 
 	measure 'Total Purchases Variance' = [Total Purchases] - [Total Purchases Prev Month]
 		formatString: 0.00
+		displayFolder: Growth & Time Intelligence\Purchases
 		lineageTag: 2f837f1e-e9bb-4f24-9350-59bb7e3bcd45
 
 	measure '% Total Purchases Growth' =
@@ -764,6 +816,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Purchases
 		lineageTag: 7e3f53a9-2198-42fe-a155-ee221d88d026
 
 	measure 'Web Purchase %' = ```
@@ -775,6 +828,7 @@ table Measures_Table
 			    )
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Channel Performance
 		lineageTag: fdc89140-9d78-482f-a4e3-083baf8ca9ed
 
 	measure 'Store Purchase %' = ```
@@ -786,6 +840,7 @@ table Measures_Table
 			    )
 			```
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Channel Performance
 		lineageTag: 15a43028-d19e-4cfb-b660-7d6b319e3b23
 
 	measure 'Catalog Purchase %' =
@@ -796,6 +851,7 @@ table Measures_Table
 			    0
 			    )
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Channel Performance
 		lineageTag: 27885224-0a40-4029-adcb-4e9c6a581af8
 
 	measure 'Top Channel %' =
@@ -805,6 +861,7 @@ table Measures_Table
 			    [Catalog Purchase %]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Channel Performance
 		lineageTag: a3deba42-5eba-4cc6-80c3-e958d357dd9e
 
 	measure 'Top Channel % Prev Month' =
@@ -818,10 +875,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Channel Top
 		lineageTag: 7c2c3529-5baa-4be0-ada8-2f549552204b
 
 	measure 'Top Channel % Variance' = [Top Channel %] - [Top Channel % Prev Month]
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Channel Top
 		lineageTag: 3b111833-6097-4e30-b00f-644c4ae529e8
 
 	measure 'Top Channel % Growth' =
@@ -832,6 +891,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Channel Top
 		lineageTag: d56cd501-70ed-45cf-831a-b6bd365e9d3e
 
 	measure 'Top Channel Name' =
@@ -847,6 +907,7 @@ table Measures_Table
 			    StorePct >= WebPct && StorePct >= CatalogPct, "Store",
 			    "Catalog"
 			)
+		displayFolder: Channel Performance
 		lineageTag: 646ffa16-ac8a-496b-952e-97c81f3b0b19
 
 	measure 'Purchases by Channel' =
@@ -859,6 +920,7 @@ table Measures_Table
 			    "Deals", SUM(FactCustomerMetrics[NumDealsPurchases])
 			)
 		formatString: 0
+		displayFolder: Channel Performance
 		lineageTag: 2754c30e-1102-4f3d-94c2-884946cb1b9b
 
 	measure 'Revenue by Channel' =
@@ -871,6 +933,7 @@ table Measures_Table
 			    "Deals", [Total Revenue] * [Deals Purchase %]
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Channel Performance
 		lineageTag: c3821158-1ff7-4bba-90cc-1fd7acfa0104
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -883,6 +946,7 @@ table Measures_Table
 			    0
 			    )
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Channel Performance
 		lineageTag: 18dbdf0d-eebe-49aa-ad04-09b97d27126f
 
 	measure 'Max Conversion' =
@@ -891,6 +955,7 @@ table Measures_Table
 			    ALLSELECTED(DimDate),
 			    [Web Conversion Rate]
 			)
+		displayFolder: Statistical / Highlight Metrics
 		lineageTag: e2fc83fd-3712-4cb9-b7e7-88d3daa663be
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -901,6 +966,7 @@ table Measures_Table
 			    ALLSELECTED(DimDate),
 			    [Web Conversion Rate]
 			)
+		displayFolder: Statistical / Highlight Metrics
 		lineageTag: d3928ce0-5ccc-4416-af1e-c0f6c7e6fbfc
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -912,6 +978,7 @@ table Measures_Table
 			    [Web Conversion Rate],
 			    BLANK()
 			)
+		displayFolder: Statistical / Highlight Metrics
 		lineageTag: cee4347f-843f-41cd-af97-f219e886f17b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -923,6 +990,7 @@ table Measures_Table
 			    [Web Conversion Rate],
 			    BLANK()
 			)
+		displayFolder: Statistical / Highlight Metrics
 		lineageTag: 9de08e98-6b33-47e3-999a-db388860ab62
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -934,6 +1002,7 @@ table Measures_Table
 			    FactCustomerMetrics[TotalCampaignAccepted] > 0
 			)
 		formatString: 0
+		displayFolder: KPIs\Marketing Campaign KPIs
 		lineageTag: 9e5b92c8-6919-4e8d-ae9d-4d35299638bf
 
 	measure 'Revenue per Responder' =
@@ -944,6 +1013,7 @@ table Measures_Table
 			    0
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue per Responder
 		lineageTag: c428fb35-d08c-4779-bc62-044945b54e8d
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -956,6 +1026,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: KPIs\Marketing Campaign KPIs
 		lineageTag: 7e9e43b3-9680-4134-ac9e-730d9b3376a4
 
 	measure 'Revenue Campaign Responders Prev Month' =
@@ -969,12 +1040,14 @@ table Measures_Table
 			    )
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue Responders
 		lineageTag: 945b930a-1082-42b7-8756-b8ee77112bc5
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	measure 'Revenue Campaign Responders Variance' = [Revenue Campaign Responders] - [Revenue Campaign Responders Prev Month]
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue Responders
 		lineageTag: 17fad30c-0655-403f-9453-36833a50c087
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -990,12 +1063,14 @@ table Measures_Table
 			    )
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue per Responder
 		lineageTag: 588ae0d0-c362-49c4-8fd4-862d2917560a
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
 	measure 'Revenue per Responder Variance' = [Revenue per Responder] - [Revenue per Responder Prev Month]
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Growth & Time Intelligence\Revenue per Responder
 		lineageTag: 73373a25-d9be-4a08-a04b-ab34782a5a32
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -1008,6 +1083,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Revenue per Responder
 		lineageTag: a7bed67f-fbe4-4f6f-a6da-92f9959febfc
 
 	measure 'High Value Responders %' =
@@ -1022,6 +1098,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: KPIs\Marketing Campaign KPIs
 		lineageTag: 1d002075-671c-43a8-9142-f137ff6dc69a
 
 	measure 'Campaign Responses Dynamic' =
@@ -1035,6 +1112,7 @@ table Measures_Table
 			    "Campaign 5", SUM(FactCustomerMetrics[AcceptedCmp5])
 			)
 		formatString: 0
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: af4b38e5-2654-45bc-8c20-439abd4c25d2
 
 	measure 'Targeted by Campaign' = ```
@@ -1074,6 +1152,7 @@ table Measures_Table
 			)
 			```
 		formatString: 0
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: fdb93472-eeb6-44ec-93b0-0c2a9e38f393
 
 	measure 'Campaign Conversion Rate Dynamic' =
@@ -1084,6 +1163,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: a39e2942-6f1f-4314-96c5-ec9131c210a7
 
 	measure 'Campaign Responses Total' =
@@ -1094,6 +1174,7 @@ table Measures_Table
 			SUM(FactCustomerMetrics[AcceptedCmp4]) +
 			SUM(FactCustomerMetrics[AcceptedCmp5])
 		formatString: 0
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: da2988e3-34c6-467c-9051-d7084ab02432
 
 	measure 'Revenue by Campaign' = ```
@@ -1105,6 +1186,7 @@ table Measures_Table
 			)
 			```
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: bc5968a2-720b-4552-895c-2337aa212ce7
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -1117,6 +1199,7 @@ table Measures_Table
 			    0
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: 95352833-40eb-4f30-8232-4624abb6e83d
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -1128,6 +1211,7 @@ table Measures_Table
 			    [Campaign Conversion Rate Dynamic]
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: 01b62f23-e327-4673-b051-03dcbdaa2018
 
 	measure 'Avg Revenue per Responder Dynamic' =
@@ -1137,6 +1221,7 @@ table Measures_Table
 			    [Revenue per Responder Dynamic]
 			)
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Campaign Analysis (Dynamic)
 		lineageTag: da4e4060-93db-4827-9375-d039ba06ccf0
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -1151,6 +1236,7 @@ table Measures_Table
 			    }
 			)
 		formatString: 0
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 4efdfe9a-2209-4f02-ad00-3ba1647c3bf5
 
 	measure 'VIP Customers' =
@@ -1160,6 +1246,7 @@ table Measures_Table
 			    FactCustomerMetrics[Engagement_Score_segment] = "Champions"
 			)
 		formatString: 0
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: e4af67e5-eb5e-44ed-afa2-f1b49a37a93e
 
 	measure 'Loyal Customers' =
@@ -1169,6 +1256,7 @@ table Measures_Table
 			    FactCustomerMetrics[Engagement_Score_segment] = "High Engagement"
 			)
 		formatString: 0
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 31d0a860-710c-4b47-a73f-e649edf1edbb
 
 	measure 'High Value Customers Prev Month' =
@@ -1182,10 +1270,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: 5b4e7160-fb69-49e6-91bb-2a33c1dd4d24
 
 	measure 'High Value Customers Variance' = [High Value Customers] - [High Value Customers Prev Month]
 		formatString: 0
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: ba086532-3ab8-495a-9885-553171b36f96
 
 	measure '% High Value Customers Growth' =
@@ -1196,6 +1286,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: 91844484-ec35-4714-b771-ca7e1f2f9c2c
 
 	measure 'At Risk Customers Prev Month' =
@@ -1209,10 +1300,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: acb84488-394d-4c8a-8b2b-f0a904baeab4
 
 	measure 'At Risk Customers Variance' = [At Risk Customers] - [At Risk Customers Prev Month]
 		formatString: 0
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: 8b2284bf-bdf6-45b7-b946-c8d08179bff9
 
 	measure '% At Risk Customers Growth' =
@@ -1223,6 +1316,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: bf2a74d8-1de0-4628-97b3-f5b883c9e26a
 
 	measure '% At Risk Customers' =
@@ -1233,6 +1327,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: b43fc4b6-e405-4c07-9b43-b7719ae8983e
 
 	measure 'Avg Recency At Risk' =
@@ -1241,6 +1336,7 @@ table Measures_Table
 			    AVERAGE(FactCustomerMetrics[Recency]),
 			    FactCustomerMetrics[Engagement_Score_segment] = "Low Engagement"
 			)
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 1608fff6-abbd-493d-ad30-46493af3ed6a
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1256,6 +1352,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 1263cc1b-c1a2-4837-a297-3701bc70c287
 
 	measure '% Low Engagement' =
@@ -1269,6 +1366,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: cef53f77-988d-4df1-bf99-a612f530dcb7
 
 	measure '% High Value Customers (RFM)' =
@@ -1279,6 +1377,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 7e0e6df7-6acf-4788-b3eb-26a991d81420
 
 	measure '% High Value Customers (RFM) Prev Month' =
@@ -1292,10 +1391,12 @@ table Measures_Table
 			    )
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: a33b54a2-e118-4e16-a80b-17de421445c3
 
 	measure '% High Value Customers (RFM) Variance' = [% High Value Customers (RFM)] - [% High Value Customers (RFM) Prev Month]
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: 104d74ca-e646-4ca3-8742-7ee72cef5c3d
 
 	measure '% High Value Customers (RFM) Growth' =
@@ -1306,6 +1407,7 @@ table Measures_Table
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\RFM Growth
 		lineageTag: 3508856d-6e8d-45ed-a3b6-1363bf57c150
 
 	measure 'Revenue per Customer' = ```
@@ -1317,6 +1419,7 @@ table Measures_Table
 			    )
 			```
 		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		displayFolder: Customer Value & Segmentation (RFM)
 		lineageTag: 90e4b67e-c193-4151-892e-1ec6dba4b140
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
@@ -1324,6 +1427,7 @@ table Measures_Table
 	measure 'Recency per Customer' =
 			
 			AVERAGE(FactCustomerMetrics[Recency])
+		displayFolder: Behavioral Metrics (Scatter / RFM Engine)
 		lineageTag: 4be1bf54-114e-41c2-a1c6-9ea00f74beb3
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1335,6 +1439,7 @@ table Measures_Table
 			SUM(FactCustomerMetrics[NumCatalogPurchases]) +
 			SUM(FactCustomerMetrics[NumDealsPurchases])
 		formatString: 0
+		displayFolder: Behavioral Metrics (Scatter / RFM Engine)
 		lineageTag: b3b4ffc3-d0dc-44a2-855f-3f1fbd8f0e95
 
 	measure 'Avg Frequency' =
@@ -1343,6 +1448,7 @@ table Measures_Table
 			    VALUES(FactCustomerMetrics[ID]),
 			    [Frequency]
 			)
+		displayFolder: Behavioral Metrics (Scatter / RFM Engine)
 		lineageTag: 0ffcb8ac-b4ed-44a5-a617-aeabc2c16e04
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
@@ -1354,6 +1460,7 @@ table Measures_Table
 			    2
 			)
 		formatString: 0.00
+		displayFolder: Behavioral Metrics (Scatter / RFM Engine)
 		lineageTag: 2d75ce5d-acd5-45d4-bda4-8b271aacc866
 
 	partition Measures_Table = m
