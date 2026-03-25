@@ -849,6 +849,84 @@ table Measures_Table
 			)
 		lineageTag: 646ffa16-ac8a-496b-952e-97c81f3b0b19
 
+	measure 'Purchases by Channel' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Channel Table'[Channel]),
+			    "Web", SUM(FactCustomerMetrics[NumWebPurchases]),
+			    "Store", SUM(FactCustomerMetrics[NumStorePurchases]),
+			    "Catalog", SUM(FactCustomerMetrics[NumCatalogPurchases]),
+			    "Deals", SUM(FactCustomerMetrics[NumDealsPurchases])
+			)
+		formatString: 0
+		lineageTag: 2754c30e-1102-4f3d-94c2-884946cb1b9b
+
+	measure 'Revenue by Channel' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Channel Table'[Channel]),
+			    "Web", [Total Revenue] * [Web Purchase %],
+			    "Store", [Total Revenue] * [Store Purchase %],
+			    "Catalog", [Total Revenue] * [Catalog Purchase %],
+			    "Deals", [Total Revenue] * [Deals Purchase %]
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: c3821158-1ff7-4bba-90cc-1fd7acfa0104
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Deals Purchase %' =
+			
+			DIVIDE(
+			    [Deals Purchases],
+			    [Total Purchases],
+			    0
+			    )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 18dbdf0d-eebe-49aa-ad04-09b97d27126f
+
+	measure 'Max Conversion' =
+			
+			MAXX(
+			    ALLSELECTED(DimDate),
+			    [Web Conversion Rate]
+			)
+		lineageTag: e2fc83fd-3712-4cb9-b7e7-88d3daa663be
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Min Conversion' =
+			
+			MINX(
+			    ALLSELECTED(DimDate),
+			    [Web Conversion Rate]
+			)
+		lineageTag: d3928ce0-5ccc-4416-af1e-c0f6c7e6fbfc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Max Point' =
+			
+			IF(
+			    [Web Conversion Rate] = [Max Conversion],
+			    [Web Conversion Rate],
+			    BLANK()
+			)
+		lineageTag: cee4347f-843f-41cd-af97-f219e886f17b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Min Point' =
+			
+			IF(
+			    [Web Conversion Rate] = [Min Conversion],
+			    [Web Conversion Rate],
+			    BLANK()
+			)
+		lineageTag: 9de08e98-6b33-47e3-999a-db388860ab62
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition Measures_Table = m
 		mode: import
 		source =

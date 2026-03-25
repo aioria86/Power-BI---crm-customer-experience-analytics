@@ -1,6 +1,10 @@
 table FactCustomerMetrics
 	lineageTag: f2b25773-4769-4baa-8a83-d105ffedb23c
 
+	measure 'Deals Purchases' = SUM(FactCustomerMetrics[NumDealsPurchases])
+		formatString: #,0
+		lineageTag: 66b2d0e4-ffe5-41cf-b93e-e98cea00b24a
+
 	column ID
 		dataType: string
 		isHidden

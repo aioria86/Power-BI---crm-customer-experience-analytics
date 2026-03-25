@@ -1,0 +1,27 @@
+table 'Channel Table'
+	lineageTag: 57725a61-ebf8-45c3-a6fe-66c4276c6d90
+
+	column Channel
+		lineageTag: 9c4425ef-770d-47bb-a121-5d938fa13d2c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Channel]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Channel Table' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Channel", STRING,
+				    {
+				        {"Web"},
+				        {"Store"},
+				        {"Catalog"},
+				        {"Deals"}
+				    }
+				)
+
+	annotation PBI_Id = 5a708f8b8ca74d01a7bafa816b34d942
+
