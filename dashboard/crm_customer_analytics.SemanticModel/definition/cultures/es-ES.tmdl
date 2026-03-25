@@ -16777,6 +16777,1458 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
+			    },
+			    "measures_table.avg_campaign_conversion_rate_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Avg Campaign Conversion Rate Dynamic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg campaign conversion rate dynamic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average campaign conversion rate dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.avg_revenue_per_responder_dynamic": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Avg Revenue per Responder Dynamic"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg revenue per responder dynamic": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg income per responder dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "avg profit per responder dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "avg turnover per responder dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "avg yield per responder dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "average revenue per responder dynamic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "High Value Customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "high value customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value customers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high value clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high value patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high value client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high value consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "high value punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "value clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "value patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "value client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "value consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "value punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.VIP_customers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "VIP Customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "VIP customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "vip clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "vip patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "vip client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "vip consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "vip punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.loyal_customers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Loyal Customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "loyal customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customers": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "loyal clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "loyal patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "loyal client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "loyal consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "loyal punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_prev_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "High Value Customers Prev Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "high value customers prev month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "high value customer prev mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_variance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "High Value Customers Variance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "high value customers variance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "variance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "customers variance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value customers variance": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "high value customer alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "high value customer modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "high value customer adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "value customer alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "value customer modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "value customer adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "customer alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "customer modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "customer adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "high value customer change": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_growth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% High Value Customers Growth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% high value customers growth": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage high value customer growth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct high value customer growth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "% high value customer development": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% high value customer evolution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% high value customer progression": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "% high value customer growing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% high value customer progress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% high value customer advance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "% high value customer tumor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "% high value customer cyst": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "MoM Growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.at_risk_customers_prev_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "At Risk Customers Prev Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "at risk customers prev month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "at risk customer prev mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "at danger customer prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at jeopardy customer prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at risk clientele prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at risk patron prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at risk client prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at risk consumer prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at risk punter prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "at peril customer prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "at hazard customer prev month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.at_risk_customers_variance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "At Risk Customers Variance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "at risk customers variance": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "at danger customer variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at jeopardy customer variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk clientele variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk patron variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk customer alteration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk customer modification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk client variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk customer adjustment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk consumer variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "at risk punter variance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.at_risk_customers_growth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% At Risk Customers Growth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% at risk customers growth": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage at risk customer growth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "pct at risk customer growth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.757
+			          }
+			        },
+			        {
+			          "MoM Growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.at_risk_customers1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% At Risk Customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% at risk customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage at risk customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "pct at risk customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "At Risk %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.avg_recency_at_risk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Avg Recency At Risk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg recency at risk": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average recency at risk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Avg Recency": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.medium_engagement": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% Medium Engagement"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% medium engagement": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage medium engagement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct medium engagement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% medium appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% medium assignation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% medium commitment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% medium arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% medium meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% medium rendezvous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% medium visit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% medium tryst": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Medium Engagement %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.low_engagement": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% Low Engagement"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% low engagement": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "percentage low engagement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "pct low engagement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "% low appointment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% low assignation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% low commitment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% low arrangement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "% low meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% low rendezvous": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% low visit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "% low tryst": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "Low Engagement %": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_RFM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% High Value Customers (RFM)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% high value customers (RFM)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% high value customers": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "Customer Mix": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_RFM_prev_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% High Value Customers (RFM) Prev Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% high value customers (RFM) prev month": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_RFM_variance": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% High Value Customers (RFM) Variance"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% high value customers (RFM) variance": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.high_value_customers_RFM_growth": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "% High Value Customers (RFM) Growth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% high value customers (RFM) growth": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MoM Growth": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -16927,6 +18379,699 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_age_groups_have_dim_customers"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_RFM_growth": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_RFM_growth": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_RFM_growth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_RFM_growth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__high_value_customers_RFM_growth"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_RFM_variance": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_RFM_variance": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_RFM_variance"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_RFM_variance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__high_value_customers_RFM_variance"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_RFM_prev_month": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_RFM_prev_month": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_RFM_prev_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_RFM_prev_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__high_value_customers_RFM_prev_month"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_RFM": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_RFM": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_RFM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_RFM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__high_value_customers_RFM"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_low_engagement": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.low_engagement": {
+			          "Target": {
+			            "Entity": "measures_table.low_engagement"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.low_engagement"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__low_engagement"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_medium_engagement": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.medium_engagement": {
+			          "Target": {
+			            "Entity": "measures_table.medium_engagement"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.medium_engagement"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__medium_engagement"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_avg_recency_at_risk": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.avg_recency_at_risk": {
+			          "Target": {
+			            "Entity": "measures_table.avg_recency_at_risk"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_recency_at_risk"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_avg_recency_at_risk"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_at_risk_customers1": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.at_risk_customers1": {
+			          "Target": {
+			            "Entity": "measures_table.at_risk_customers1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.at_risk_customers1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__at_risk_customers"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_at_risk_customers_growth": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.at_risk_customers_growth": {
+			          "Target": {
+			            "Entity": "measures_table.at_risk_customers_growth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.at_risk_customers_growth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__at_risk_customers_growth"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_at_risk_customers_variance": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.at_risk_customers_variance": {
+			          "Target": {
+			            "Entity": "measures_table.at_risk_customers_variance"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.at_risk_customers_variance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_at_risk_customers_variance"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_at_risk_customers_prev_month": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.at_risk_customers_prev_month": {
+			          "Target": {
+			            "Entity": "measures_table.at_risk_customers_prev_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.at_risk_customers_prev_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_at_risk_customers_prev_month"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_growth": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_growth": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_growth"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_growth"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have__high_value_customers_growth"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_variance": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_variance": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_variance"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_variance"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_high_value_customers_variance"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers_prev_month": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers_prev_month": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers_prev_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers_prev_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_high_value_customers_prev_month"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_loyal_customers": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.loyal_customers": {
+			          "Target": {
+			            "Entity": "measures_table.loyal_customers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.loyal_customers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_loyal_customers"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_VIP_customers": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.VIP_customers": {
+			          "Target": {
+			            "Entity": "measures_table.VIP_customers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.VIP_customers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_VIP_customers"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_high_value_customers1": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.high_value_customers1": {
+			          "Target": {
+			            "Entity": "measures_table.high_value_customers1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.high_value_customers1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_high_value_customers"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_avg_revenue_per_responder_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.avg_revenue_per_responder_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.avg_revenue_per_responder_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_revenue_per_responder_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_avg_revenue_per_responder_dynamic"
+			        }
+			      ]
+			    },
+			    "campaign_table_has_measures_table_avg_revenue_per_responder_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Campaign Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "campaign_table": {
+			          "Target": {
+			            "Entity": "campaign_table"
+			          }
+			        },
+			        "measures_table.avg_revenue_per_responder_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.avg_revenue_per_responder_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "campaign_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_revenue_per_responder_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "campaign_tables_have_avg_revenue_per_responder_dynamic"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_avg_campaign_conversion_rate_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.avg_campaign_conversion_rate_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.avg_campaign_conversion_rate_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_campaign_conversion_rate_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_avg_campaign_conversion_rate_dynamic"
+			        }
+			      ]
+			    },
+			    "campaign_table_has_measures_table_avg_campaign_conversion_rate_dynamic": {
+			      "Binding": {
+			        "ConceptualEntity": "Campaign Table"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "campaign_table": {
+			          "Target": {
+			            "Entity": "campaign_table"
+			          }
+			        },
+			        "measures_table.avg_campaign_conversion_rate_dynamic": {
+			          "Target": {
+			            "Entity": "measures_table.avg_campaign_conversion_rate_dynamic"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "campaign_table"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_campaign_conversion_rate_dynamic"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "campaign_tables_have_avg_campaign_conversion_rate_dynamic"
 			        }
 			      ]
 			    },

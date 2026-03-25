@@ -4,10 +4,10 @@
   "position": {
     "x": 390.90909090909088,
     "y": 392.72727272727269,
-    "z": 4002,
+    "z": 6000,
     "height": 320.90909090909088,
     "width": 423.63636363636363,
-    "tabOrder": 8002
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -317,20 +317,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "631169e7e01dd3245fab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measures_Table"
-              }
-            },
-            "Property": "Total Revenue"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -6,7 +6,8 @@
     "y": 91.586901763224176,
     "z": 4000,
     "height": 200.40302267002517,
-    "width": 311.03274559193954
+    "width": 311.03274559193954,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "KPI Campaign Conversion Rate",

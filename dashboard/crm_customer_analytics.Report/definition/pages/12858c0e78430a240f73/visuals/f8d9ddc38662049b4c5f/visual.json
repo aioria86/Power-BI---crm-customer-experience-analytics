@@ -4,10 +4,10 @@
   "position": {
     "x": 387.27272727272725,
     "y": 90.9090909090909,
-    "z": 4001,
+    "z": 5000,
     "height": 299.09090909090907,
     "width": 418.18181818181813,
-    "tabOrder": 8001
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -384,34 +384,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "219770a6f9f3c8790b9d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "FactCustomerMetrics"
-              }
-            },
-            "Property": "Total_Spending"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7240fa74f5697d41823e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measures_Table"
-              }
-            },
-            "Property": "Total Purchases"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

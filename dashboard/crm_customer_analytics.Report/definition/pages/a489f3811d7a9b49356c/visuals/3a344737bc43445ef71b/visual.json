@@ -6,7 +6,8 @@
     "y": 303.29743164871581,
     "z": 7750,
     "height": 194.06793703396852,
-    "width": 310.72079536039769
+    "width": 310.72079536039769,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "KPI Revenue",

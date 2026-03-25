@@ -6,7 +6,8 @@
     "y": 516.06296316330486,
     "z": 3000,
     "height": 200.43082021541011,
-    "width": 310.72079536039769
+    "width": 310.72079536039769,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "KPI Revenue Concentration",

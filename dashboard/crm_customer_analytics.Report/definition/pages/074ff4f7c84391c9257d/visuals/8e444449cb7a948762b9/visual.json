@@ -4,10 +4,10 @@
   "position": {
     "x": 775.3148614609571,
     "y": 92.493702770780857,
-    "z": 1006,
+    "z": 7000,
     "height": 304.68513853904278,
     "width": 496.0201511335012,
-    "tabOrder": 8003
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -214,37 +214,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "683240107cfb829fa074",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "DimAgeGroup"
-              }
-            },
-            "Property": "Total Web Visits"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0e29a0064cbb486f69a6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measures_Table"
-              }
-            },
-            "Property": "Web Purchases"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

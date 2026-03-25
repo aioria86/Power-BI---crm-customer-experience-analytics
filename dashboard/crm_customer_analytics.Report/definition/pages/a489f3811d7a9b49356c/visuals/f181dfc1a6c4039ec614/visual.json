@@ -6,7 +6,8 @@
     "y": 91.2013256006628,
     "z": 7500,
     "height": 199.37033968516982,
-    "width": 310.72079536039769
+    "width": 310.72079536039769,
+    "tabOrder": 8000
   },
   "visualGroup": {
     "displayName": "KPI Customers",
