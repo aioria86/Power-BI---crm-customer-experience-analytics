@@ -9,6 +9,7 @@ table 'Channel Table'
 			    0
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: Growth & Time Intelligence\Revenue Responders
 		lineageTag: 8c189f50-a36f-4409-9ec2-6283011dc320
 
 	column Channel
