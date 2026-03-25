@@ -1141,6 +1141,173 @@ table Measures_Table
 
 		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
 
+	measure 'High Value Customers' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			    FactCustomerMetrics[Engagement_Score_segment] IN {
+			        "Champions",
+			        "High Engagement"
+			    }
+			)
+		formatString: 0
+		lineageTag: 4efdfe9a-2209-4f02-ad00-3ba1647c3bf5
+
+	measure 'VIP Customers' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			    FactCustomerMetrics[Engagement_Score_segment] = "Champions"
+			)
+		formatString: 0
+		lineageTag: e4af67e5-eb5e-44ed-afa2-f1b49a37a93e
+
+	measure 'Loyal Customers' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			    FactCustomerMetrics[Engagement_Score_segment] = "High Engagement"
+			)
+		formatString: 0
+		lineageTag: 31d0a860-710c-4b47-a73f-e649edf1edbb
+
+	measure 'High Value Customers Prev Month' =
+			
+			CALCULATE(
+			    [High Value Customers],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0
+		lineageTag: 5b4e7160-fb69-49e6-91bb-2a33c1dd4d24
+
+	measure 'High Value Customers Variance' = [High Value Customers] - [High Value Customers Prev Month]
+		formatString: 0
+		lineageTag: ba086532-3ab8-495a-9885-553171b36f96
+
+	measure '% High Value Customers Growth' =
+			
+			DIVIDE(
+			    [High Value Customers] - [High Value Customers Prev Month],
+			    [High Value Customers Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 91844484-ec35-4714-b771-ca7e1f2f9c2c
+
+	measure 'At Risk Customers Prev Month' =
+			
+			CALCULATE(
+			    [At Risk Customers],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0
+		lineageTag: acb84488-394d-4c8a-8b2b-f0a904baeab4
+
+	measure 'At Risk Customers Variance' = [At Risk Customers] - [At Risk Customers Prev Month]
+		formatString: 0
+		lineageTag: 8b2284bf-bdf6-45b7-b946-c8d08179bff9
+
+	measure '% At Risk Customers Growth' =
+			
+			DIVIDE(
+			    [At Risk Customers] - [At Risk Customers Prev Month],
+			    [At Risk Customers Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: bf2a74d8-1de0-4628-97b3-f5b883c9e26a
+
+	measure '% At Risk Customers' =
+			
+			DIVIDE(
+			    [At Risk Customers],
+			    [Total Customers],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: b43fc4b6-e405-4c07-9b43-b7719ae8983e
+
+	measure 'Avg Recency At Risk' =
+			
+			CALCULATE(
+			    AVERAGE(FactCustomerMetrics[Recency]),
+			    FactCustomerMetrics[Engagement_Score_segment] = "Low Engagement"
+			)
+		lineageTag: 1608fff6-abbd-493d-ad30-46493af3ed6a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Medium Engagement' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			        FactCustomerMetrics[Engagement_Score_segment] = "Medium Engagement"
+			    ),
+			    [Total Customers],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1263cc1b-c1a2-4837-a297-3701bc70c287
+
+	measure '% Low Engagement' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			        FactCustomerMetrics[Engagement_Score_segment] = "Low Engagement"
+			    ),
+			    [Total Customers],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: cef53f77-988d-4df1-bf99-a612f530dcb7
+
+	measure '% High Value Customers (RFM)' =
+			
+			DIVIDE(
+			    [High Value Customers],
+			    [Total Customers],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7e0e6df7-6acf-4788-b3eb-26a991d81420
+
+	measure '% High Value Customers (RFM) Prev Month' =
+			
+			CALCULATE(
+			    [% High Value Customers (RFM)],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a33b54a2-e118-4e16-a80b-17de421445c3
+
+	measure '% High Value Customers (RFM) Variance' = [% High Value Customers (RFM)] - [% High Value Customers (RFM) Prev Month]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 104d74ca-e646-4ca3-8742-7ee72cef5c3d
+
+	measure '% High Value Customers (RFM) Growth' =
+			
+			DIVIDE(
+			    [% High Value Customers (RFM)] - [% High Value Customers (RFM) Prev Month],
+			    [% High Value Customers (RFM) Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3508856d-6e8d-45ed-a3b6-1363bf57c150
+
 	partition Measures_Table = m
 		mode: import
 		source =

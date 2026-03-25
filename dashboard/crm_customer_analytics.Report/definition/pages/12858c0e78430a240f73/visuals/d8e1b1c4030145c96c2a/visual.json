@@ -6,7 +6,8 @@
     "y": 10.243447054943813,
     "z": 1000,
     "height": 88.599157663431612,
-    "width": 211.72489721970592
+    "width": 211.72489721970592,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -306,23 +307,5 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "d9eabe04a4395544ad90",
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "2e9e7ba56794e7772013",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Measures_Table"
-              }
-            },
-            "Property": "ARPC"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
-  }
+  "parentGroupName": "d9eabe04a4395544ad90"
 }

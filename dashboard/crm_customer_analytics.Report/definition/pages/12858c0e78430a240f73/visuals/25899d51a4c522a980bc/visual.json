@@ -6,7 +6,8 @@
     "y": 91.2013256006628,
     "z": 2000,
     "height": 199.37033968516982,
-    "width": 310.72079536039769
+    "width": 310.72079536039769,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "KPI AVG Income",
