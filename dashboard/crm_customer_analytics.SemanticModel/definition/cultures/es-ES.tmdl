@@ -3766,6 +3766,26 @@ cultureInfo es-ES
 			            },
 			            "Weight": 0.739
 			          }
+			        },
+			        {
+			          "Engagement Segment": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Engagement": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -15168,16 +15188,6 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "frequency": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
 			          "station": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -18161,7 +18171,7 @@ cultureInfo es-ES
 			          }
 			        },
 			        {
-			          "Customer Mix": {
+			          "High Value Ratio": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -18229,67 +18239,361 @@ cultureInfo es-ES
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "dim_customer_has_dim_marital": {
-			      "Binding": {
-			        "ConceptualEntity": "DimCustomer"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_customer": {
-			          "Target": {
-			            "Entity": "dim_customer"
-			          }
-			        },
-			        "dim_marital": {
-			          "Target": {
-			            "Entity": "dim_marital"
-			          },
-			          "Nouns": [
-			            {
-			              "marital status": {
-			                "State": "Generated"
-			              }
-			            },
-			            {
-			              "status": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			    },
+			    "measures_table.revenue_per_customer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Revenue per Customer"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_customer"
-			            },
-			            "Object": {
-			              "Role": "dim_marital"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_customers_have_dim_marital"
+			          "revenue per customer": {
+			            "State": "Generated"
+			          }
 			        },
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_marital"
+			          "revenue": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
 			            },
-			            "Object": {
-			              "Role": "dim_customer"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_marital_have_dim_customers"
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "profit per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "turnover per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "yield per customer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "profit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "revenue per client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "revenue per consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "revenue per user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
 			        }
 			      ]
 			    },
+			    "measures_table.recency_per_customer": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Recency per Customer"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "recency per customer": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "recency per client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "recency per consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "recency per user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "recency per buyer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "recency per patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "recency per purchaser": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "recency per shopper": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.frequency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Frequency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "frequency": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "incidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "regularity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.avg_frequency": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Avg Frequency"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg frequency": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "avg incidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "avg occurrence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "avg regularity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "avg rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "measures_table.avg_recency_line": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Measures_Table",
+			          "ConceptualProperty": "Avg Recency (Line)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg recency (line)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg recency": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "average recency (line)": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "dim_customer_has_dim_education": {
 			      "Binding": {
 			        "ConceptualEntity": "DimCustomer"
@@ -18379,6 +18683,171 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_age_groups_have_dim_customers"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_avg_recency_line": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.avg_recency_line": {
+			          "Target": {
+			            "Entity": "measures_table.avg_recency_line"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_recency_line"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_avg_recency_line"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_avg_frequency": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.avg_frequency": {
+			          "Target": {
+			            "Entity": "measures_table.avg_frequency"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.avg_frequency"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_avg_frequency"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_frequency": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.frequency": {
+			          "Target": {
+			            "Entity": "measures_table.frequency"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.frequency"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_frequency"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_recency_per_customer": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.recency_per_customer": {
+			          "Target": {
+			            "Entity": "measures_table.recency_per_customer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.recency_per_customer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_recency_per_customer"
+			        }
+			      ]
+			    },
+			    "fact_customer_metrics_has_measures_table_revenue_per_customer": {
+			      "Binding": {
+			        "ConceptualEntity": "FactCustomerMetrics"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_customer_metrics": {
+			          "Target": {
+			            "Entity": "fact_customer_metrics"
+			          }
+			        },
+			        "measures_table.revenue_per_customer": {
+			          "Target": {
+			            "Entity": "measures_table.revenue_per_customer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_customer_metrics"
+			            },
+			            "Object": {
+			              "Role": "measures_table.revenue_per_customer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_customer_metrics_have_revenue_per_customer"
 			        }
 			      ]
 			    },
@@ -25085,6 +25554,64 @@ cultureInfo es-ES
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_dates_have_dates"
+			        }
+			      ]
+			    },
+			    "dim_customer_has_dim_marital": {
+			      "Binding": {
+			        "ConceptualEntity": "DimCustomer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_customer": {
+			          "Target": {
+			            "Entity": "dim_customer"
+			          }
+			        },
+			        "dim_marital": {
+			          "Target": {
+			            "Entity": "dim_marital"
+			          },
+			          "Nouns": [
+			            {
+			              "marital status": {
+			                "State": "Generated"
+			              }
+			            },
+			            {
+			              "status": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_customer"
+			            },
+			            "Object": {
+			              "Role": "dim_marital"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_customers_have_dim_marital"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_marital"
+			            },
+			            "Object": {
+			              "Role": "dim_customer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_marital_have_dim_customers"
 			        }
 			      ]
 			    },
