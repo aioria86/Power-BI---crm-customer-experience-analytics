@@ -1,0 +1,28 @@
+table 'Campaign Table'
+	lineageTag: dc32e860-5224-40f9-b091-1b4f713019f3
+
+	column Campaign
+		lineageTag: 0038e485-fa3d-4eec-acf1-ef6d5c684d68
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Campaign]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Campaign Table' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Campaign", STRING,
+				    {
+				        {"Campaign 1"},
+				        {"Campaign 2"},
+				        {"Campaign 3"},
+				        {"Campaign 4"},
+				        {"Campaign 5"}
+				    }
+				)
+
+	annotation PBI_Id = e9d5d1fce0b945c483c488fd7870bfb4
+

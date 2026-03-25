@@ -21,6 +21,7 @@ ref table DimAgeGroup
 ref table Measures_Table
 ref table 'Product Category Table'
 ref table 'Channel Table'
+ref table 'Campaign Table'
 
 ref cultureInfo es-ES
 
