@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 423.09714634784859,
+        "x": 707,
         "y": 0
       },
       "nodes": [
@@ -117,6 +117,18 @@
             "y": 282.97666949936968
           },
           "nodeIndex": "Channel Table",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1775.0971463478486,
+            "y": 282.97666949936968
+          },
+          "nodeIndex": "Campaign Table",
           "size": {
             "height": 200,
             "width": 234

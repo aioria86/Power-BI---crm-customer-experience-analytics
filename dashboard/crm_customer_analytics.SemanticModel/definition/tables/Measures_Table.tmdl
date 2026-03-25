@@ -1024,6 +1024,123 @@ table Measures_Table
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 1d002075-671c-43a8-9142-f137ff6dc69a
 
+	measure 'Campaign Responses Dynamic' =
+			
+			SWITCH(
+			    SELECTEDVALUE('Campaign Table'[Campaign]),
+			    "Campaign 1", SUM(FactCustomerMetrics[AcceptedCmp1]),
+			    "Campaign 2", SUM(FactCustomerMetrics[AcceptedCmp2]),
+			    "Campaign 3", SUM(FactCustomerMetrics[AcceptedCmp3]),
+			    "Campaign 4", SUM(FactCustomerMetrics[AcceptedCmp4]),
+			    "Campaign 5", SUM(FactCustomerMetrics[AcceptedCmp5])
+			)
+		formatString: 0
+		lineageTag: af4b38e5-2654-45bc-8c20-439abd4c25d2
+
+	measure 'Targeted by Campaign' = ```
+			
+			SWITCH(
+			    SELECTEDVALUE('Campaign Table'[Campaign]),
+			    
+			    "Campaign 1",
+			        CALCULATE(
+			            DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			            FactCustomerMetrics[AcceptedCmp1] IN {0,1}
+			        ),
+			
+			    "Campaign 2",
+			        CALCULATE(
+			            DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			            FactCustomerMetrics[AcceptedCmp2] IN {0,1}
+			        ),
+			
+			    "Campaign 3",
+			        CALCULATE(
+			            DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			            FactCustomerMetrics[AcceptedCmp3] IN {0,1}
+			        ),
+			
+			    "Campaign 4",
+			        CALCULATE(
+			            DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			            FactCustomerMetrics[AcceptedCmp4] IN {0,1}
+			        ),
+			
+			    "Campaign 5",
+			        CALCULATE(
+			            DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			            FactCustomerMetrics[AcceptedCmp5] IN {0,1}
+			        )
+			)
+			```
+		formatString: 0
+		lineageTag: fdb93472-eeb6-44ec-93b0-0c2a9e38f393
+
+	measure 'Campaign Conversion Rate Dynamic' =
+			
+			DIVIDE(
+			    [Campaign Responses Dynamic],
+			    [Targeted by Campaign],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a39e2942-6f1f-4314-96c5-ec9131c210a7
+
+	measure 'Campaign Responses Total' =
+			
+			SUM(FactCustomerMetrics[AcceptedCmp1]) +
+			SUM(FactCustomerMetrics[AcceptedCmp2]) +
+			SUM(FactCustomerMetrics[AcceptedCmp3]) +
+			SUM(FactCustomerMetrics[AcceptedCmp4]) +
+			SUM(FactCustomerMetrics[AcceptedCmp5])
+		formatString: 0
+		lineageTag: da2988e3-34c6-467c-9051-d7084ab02432
+
+	measure 'Revenue by Campaign' = ```
+			
+			[Total Revenue] * 
+			DIVIDE(
+			    [Campaign Responses],
+			    [Campaign Responses Total]
+			)
+			```
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: bc5968a2-720b-4552-895c-2337aa212ce7
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue per Responder Dynamic' =
+			
+			DIVIDE(
+			    [Revenue by Campaign],
+			    [Campaign Responses Dynamic],
+			    0
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 95352833-40eb-4f30-8232-4624abb6e83d
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Avg Campaign Conversion Rate Dynamic' =
+			
+			AVERAGEX(
+			    ALLSELECTED('Campaign Table'[Campaign]),
+			    [Campaign Conversion Rate Dynamic]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 01b62f23-e327-4673-b051-03dcbdaa2018
+
+	measure 'Avg Revenue per Responder Dynamic' =
+			
+			AVERAGEX(
+			    ALLSELECTED('Campaign Table'[Campaign]),
+			    [Revenue per Responder Dynamic]
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: da4e4060-93db-4827-9375-d039ba06ccf0
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
 	partition Measures_Table = m
 		mode: import
 		source =
