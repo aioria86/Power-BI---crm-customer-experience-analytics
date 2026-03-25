@@ -106,7 +106,7 @@ table Measures_Table
 		annotation PBI_FormatHint = {"currencyCulture":"es-US"}
 
 	measure 'Total Purchases' = SUM(FactCustomerMetrics[Total_Purchases])
-		formatString: 0
+		formatString: 0.00
 		displayFolder: KPIs\Purchase Behavior KPIs
 		lineageTag: 5333393d-d1cc-4fb4-8e5a-bc1ed5c61276
 
@@ -701,6 +701,153 @@ table Measures_Table
 			)
 		formatString: 0
 		lineageTag: ab1fad52-6eb0-42bb-8b46-ccd223bd4cb5
+
+	measure 'Web Conversion Rate' =
+			
+			DIVIDE(
+			    [Web Purchases],
+			    SUM(FactCustomerMetrics[NumWebVisitsMonth]),
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 9c27ec4d-ed06-444f-9a9a-3809311e7487
+
+	measure 'Web Conversion Rate Prev Month' =
+			
+			CALCULATE(
+			    [Web Conversion Rate],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 60540bcc-92b1-454f-8057-0c913a8edb7f
+
+	measure 'Web Conversion Rate Variance' = [Web Conversion Rate] - [Web Conversion Rate Prev Month]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: edce83e1-8546-4b7a-864e-5cbd0f12c2f5
+
+	measure '% Web Conversion Rate Growth' =
+			
+			DIVIDE(
+			    [Web Conversion Rate] - [Web Conversion Rate Prev Month],
+			    [Web Conversion Rate Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 193e30bb-5b1b-4c03-a247-11d6affa068d
+
+	measure 'Total Purchases Prev Month' =
+			
+			CALCULATE(
+			    [Total Purchases],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00
+		lineageTag: ffd098dc-cbd3-494c-b637-53f6b5313c41
+
+	measure 'Total Purchases Variance' = [Total Purchases] - [Total Purchases Prev Month]
+		formatString: 0.00
+		lineageTag: 2f837f1e-e9bb-4f24-9350-59bb7e3bcd45
+
+	measure '% Total Purchases Growth' =
+			
+			DIVIDE(
+			    [Total Purchases] - [Total Purchases Prev Month],
+			    [Total Purchases Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7e3f53a9-2198-42fe-a155-ee221d88d026
+
+	measure 'Web Purchase %' = ```
+			
+			DIVIDE(
+			    [Web Purchases], 
+			    [Total Purchases],
+			    0
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: fdc89140-9d78-482f-a4e3-083baf8ca9ed
+
+	measure 'Store Purchase %' = ```
+			
+			DIVIDE(
+			    [Store Purchases], 
+			    [Total Purchases],
+			    0
+			    )
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 15a43028-d19e-4cfb-b660-7d6b319e3b23
+
+	measure 'Catalog Purchase %' =
+			
+			DIVIDE(
+			    [Catalog Purchases],
+			    [Total Purchases],
+			    0
+			    )
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 27885224-0a40-4029-adcb-4e9c6a581af8
+
+	measure 'Top Channel %' =
+			
+			MAX(
+			    MAX([Web Purchase %], [Store Purchase %]),
+			    [Catalog Purchase %]
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a3deba42-5eba-4cc6-80c3-e958d357dd9e
+
+	measure 'Top Channel % Prev Month' =
+			
+			CALCULATE(
+			    [Top Channel %],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7c2c3529-5baa-4be0-ada8-2f549552204b
+
+	measure 'Top Channel % Variance' = [Top Channel %] - [Top Channel % Prev Month]
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 3b111833-6097-4e30-b00f-644c4ae529e8
+
+	measure 'Top Channel % Growth' =
+			
+			DIVIDE(
+			    [Top Channel %] - [Top Channel % Prev Month],
+			    [Top Channel % Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: d56cd501-70ed-45cf-831a-b6bd365e9d3e
+
+	measure 'Top Channel Name' =
+			
+			VAR WebPct = [Web Purchase %]
+			VAR StorePct = [Store Purchase %]
+			VAR CatalogPct = [Catalog Purchase %]
+			
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    WebPct >= StorePct && WebPct >= CatalogPct, "Web",
+			    StorePct >= WebPct && StorePct >= CatalogPct, "Store",
+			    "Catalog"
+			)
+		lineageTag: 646ffa16-ac8a-496b-952e-97c81f3b0b19
 
 	partition Measures_Table = m
 		mode: import

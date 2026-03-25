@@ -1,6 +1,10 @@
 table DimAgeGroup
 	lineageTag: 8ad874a2-d9b7-4d66-a810-13e9519b16c7
 
+	measure 'Total Web Visits' = SUM(FactCustomerMetrics[NumWebVisitsMonth])
+		formatString: #,0
+		lineageTag: 039f0754-80d3-43ab-ba77-769e63955ed3
+
 	column Age_segment
 		dataType: string
 		lineageTag: 1c486312-3a93-4033-88ec-7984bf3af11e
