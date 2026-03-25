@@ -47,10 +47,11 @@ The dataset includes:
 # 🧠 Data Model Highlights
 
 - Fact table: `FactCustomerMetrics`
-- Dimension tables: `DimCustomer`, `DimDate`
+- Dimension tables: `DimCustomer`, `DimDate`, `DimAgeGroup`, `DimEducation`, `DimMarital`
 - Use of **disconnected tables** for:
   - Channel analysis
   - Campaign performance
+  - Product Category
 - Custom measures for:
   - Time intelligence (MoM growth, variance)
   - Dynamic segmentation
@@ -176,26 +177,46 @@ Advanced customer segmentation:
 # 📂 Project Structure
 
 crm-customer-experience-analytics
+
 │
 ├── data
+
 │ ├── raw
+
 │ └── processed
+
 │
 ├── dashboard
+
 │
 ├── docs
+
 │ ├── data_dictionary.pdf
+
 │ └── dax_measures.csv
+
 │
 ├── images
-│ └── report-screenshots
-│ ├── executive.png
-│ ├── customer-profile.png
-│ ├── revenue-products.png
-│ ├── channels.png
-│ ├── marketing.png
-│ └── rfm.png
-│
+
+│ ├── report/screenshoots
+
+    │ └── report-screenshots
+
+    │ ├── executive.png
+
+    │ ├── customer-profile.png
+
+    │ ├── revenue-products.png
+
+    │ ├── channels.png
+
+    │ ├── marketing.png
+
+    │ └── rfm.png
+
+  ├── support
+
+    │
 └── README.md
 
 
