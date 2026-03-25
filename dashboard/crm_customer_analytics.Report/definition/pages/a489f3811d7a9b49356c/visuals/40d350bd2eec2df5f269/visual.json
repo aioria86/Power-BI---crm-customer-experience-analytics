@@ -209,6 +209,11 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Month",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "parentGroupName": "340aa14fc893926dba87"
