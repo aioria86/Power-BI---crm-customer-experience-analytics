@@ -111,6 +111,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -184,6 +191,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "Year",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   },
