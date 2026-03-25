@@ -927,6 +927,103 @@ table Measures_Table
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Targeted Customers' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(FactCustomerMetrics[ID]),
+			    FactCustomerMetrics[TotalCampaignAccepted] > 0
+			)
+		formatString: 0
+		lineageTag: 9e5b92c8-6919-4e8d-ae9d-4d35299638bf
+
+	measure 'Revenue per Responder' =
+			
+			DIVIDE(
+			    [Revenue Campaign Responders],
+			    [Campaign Responses],
+			    0
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: c428fb35-d08c-4779-bc62-044945b54e8d
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% Revenue from Responders' =
+			
+			DIVIDE(
+			    [Revenue Campaign Responders],
+			    [Total Revenue],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 7e9e43b3-9680-4134-ac9e-730d9b3376a4
+
+	measure 'Revenue Campaign Responders Prev Month' =
+			
+			CALCULATE(
+			    [Revenue Campaign Responders],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 945b930a-1082-42b7-8756-b8ee77112bc5
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue Campaign Responders Variance' = [Revenue Campaign Responders] - [Revenue Campaign Responders Prev Month]
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 17fad30c-0655-403f-9453-36833a50c087
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue per Responder Prev Month' =
+			
+			CALCULATE(
+			    [Revenue per Responder],
+			    DATEADD(
+			        DimDate[Date],
+			        -1,
+			        MONTH
+			    )
+			)
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 588ae0d0-c362-49c4-8fd4-862d2917560a
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Revenue per Responder Variance' = [Revenue per Responder] - [Revenue per Responder Prev Month]
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 73373a25-d9be-4a08-a04b-ab34782a5a32
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure '% Revenue per Responder Growth' =
+			
+			DIVIDE(
+			    [Revenue per Responder] - [Revenue per Responder Prev Month],
+			    [Revenue per Responder Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: a7bed67f-fbe4-4f6f-a6da-92f9959febfc
+
+	measure 'High Value Responders %' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS(FactCustomerMetrics),
+			        FactCustomerMetrics[Response] = 1,
+			        FactCustomerMetrics[Total_Spending] > 500
+			    ),
+			    [Campaign Responses],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 1d002075-671c-43a8-9142-f137ff6dc69a
+
 	partition Measures_Table = m
 		mode: import
 		source =
