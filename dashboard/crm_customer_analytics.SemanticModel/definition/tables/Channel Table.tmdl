@@ -1,6 +1,16 @@
 table 'Channel Table'
 	lineageTag: 57725a61-ebf8-45c3-a6fe-66c4276c6d90
 
+	measure '% Revenue Campaign Responders Growth' =
+			
+			DIVIDE(
+			    [Revenue Campaign Responders] - [Revenue Campaign Responders Prev Month],
+			    [Revenue Campaign Responders Prev Month],
+			    0
+			)
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 8c189f50-a36f-4409-9ec2-6283011dc320
+
 	column Channel
 		lineageTag: 9c4425ef-770d-47bb-a121-5d938fa13d2c
 		summarizeBy: none
