@@ -17,7 +17,7 @@ table Measures_Table
 		lineageTag: 9a2846c0-05da-48a8-9d4c-639326ea165a
 
 	measure 'Avg Recency' = AVERAGE(FactCustomerMetrics[Recency])
-		formatString: 0.00
+		formatString: #,0.00
 		displayFolder: KPIs\Customer KPIs
 		lineageTag: 983a2658-e481-4184-8fe2-d6fc79488e4f
 
@@ -1307,6 +1307,54 @@ table Measures_Table
 			)
 		formatString: 0.00\ %;-0.00\ %;0.00\ %
 		lineageTag: 3508856d-6e8d-45ed-a3b6-1363bf57c150
+
+	measure 'Revenue per Customer' = ```
+			
+			DIVIDE(
+			    [Total Revenue], 
+			    [Total Customers], 
+			    0
+			    )
+			```
+		formatString: "S/"\ #,0.00;-"S/"\ #,0.00;"S/"\ #,0.00
+		lineageTag: 90e4b67e-c193-4151-892e-1ec6dba4b140
+
+		annotation PBI_FormatHint = {"currencyCulture":"es-PE"}
+
+	measure 'Recency per Customer' =
+			
+			AVERAGE(FactCustomerMetrics[Recency])
+		lineageTag: 4be1bf54-114e-41c2-a1c6-9ea00f74beb3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Frequency =
+			
+			SUM(FactCustomerMetrics[NumWebPurchases]) +
+			SUM(FactCustomerMetrics[NumStorePurchases]) +
+			SUM(FactCustomerMetrics[NumCatalogPurchases]) +
+			SUM(FactCustomerMetrics[NumDealsPurchases])
+		formatString: 0
+		lineageTag: b3b4ffc3-d0dc-44a2-855f-3f1fbd8f0e95
+
+	measure 'Avg Frequency' =
+			
+			AVERAGEX(
+			    VALUES(FactCustomerMetrics[ID]),
+			    [Frequency]
+			)
+		lineageTag: 0ffcb8ac-b4ed-44a5-a617-aeabc2c16e04
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg Recency (Line)' =
+			
+			ROUND(
+			    AVERAGE(FactCustomerMetrics[Recency]),
+			    2
+			)
+		formatString: 0.00
+		lineageTag: 2d75ce5d-acd5-45d4-bda4-8b271aacc866
 
 	partition Measures_Table = m
 		mode: import

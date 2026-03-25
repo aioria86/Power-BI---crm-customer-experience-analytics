@@ -27,8 +27,8 @@
                 }
               },
               "queryRef": "Measures_Table.% High Value Customers (RFM)",
-              "nativeQueryRef": "Customer Mix",
-              "displayName": "Customer Mix"
+              "nativeQueryRef": "High Value Ratio",
+              "displayName": "High Value Ratio"
             }
           ]
         }
